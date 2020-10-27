@@ -1,0 +1,188 @@
+#llamar{
+    z-index: 10; 
+    position:fixed;
+    text-align:center;
+    font-family: "montserrat-regular", sans-serif;
+    color:white;
+    bottom: 15px;
+    right: 100px;
+    background-color: rgb(68, 0, 255);
+    width:250px;
+    padding:14px 0;
+    border-radius:50px;
+    border:5px solid white;
+    background-size: 100%;
+    background-repeat: no-repeat;
+  background-position: center;  
+}
+
+#llamar {
+    /* animation: shake 1s cubic-bezier(.36,.07,.19,.97) both;
+    animation: shake 2.5s infinite; */
+    animation: shake-animation 1s ease infinite;
+    transform-origin: 50% 50%;
+    transform: translate3d(0, 0, 0);
+    animation-duration: 4s;
+    backface-visibility: hidden;
+    perspective: 1000px;
+  }
+
+  @keyframes shake {
+    10%, 90% {transform: translate3d(-1px, 0, 0);}
+    20%, 80% {transform: translate3d(2px, 0, 0);}
+    30%, 50%, 70% {transform: translate3d(-4px, 0, 0);}
+    40%, 60% {transform: translate3d(4px, 0, 0);}
+  }
+
+
+  @keyframes shake-animation {
+    0% { transform:translate(0,0) }
+   1.78571% { transform:translate(5px,0) }
+   3.57143% { transform:translate(0,0) }
+   5.35714% { transform:translate(5px,0) }
+   7.14286% { transform:translate(0,0) }
+   8.92857% { transform:translate(5px,0) }
+   10.71429% { transform:translate(0,0) }
+   100% { transform:translate(0,0) }
+ }
+
+
+
+.floating-wpp-button{
+    background-color: green;
+}
+
+
+@media only screen and (max-width:700px){
+    #llamar{
+        left:10px;
+        right: auto;
+    }
+}
+
+
+/*//////////////TITULOS//////////////*/
+.tituloSeccion {
+  text-align: center;
+  position: relative;
+  padding: 2rem 4rem 0 4rem;
+}
+.azul{
+  background-color:#2a2d34;
+}
+
+.tituloSeccion > h1 {
+  font-family: "librebaskerville-bold", serif;
+  display:inline-block;
+  font-size: 4.8rem;
+  line-height: 1.375;
+  color: rgba(252, 252, 252, 0.918);
+  text-shadow: -1px -1px-1px #777474;
+  margin-bottom:0px !important;
+}
+
+
+
+/*///////////////////////PRODUCTOS DESTACADOS////////////////////////*/
+#productosDestacados{
+  background-image: url("../images/fondoCirculos.jpg");
+  background-size:20%;
+  background-repeat: repeat;
+}
+
+.fluido{
+  display:flex;
+  width:100%;
+  padding:4rem 5%;
+}
+
+
+.contenedor{
+  display:flex;
+  align-items: center;
+  align-content: center;
+  justify-content:space-around; 
+  justify-items:center;
+  flex-wrap: wrap;
+  margin:0;
+  padding:0;
+  width:100%;
+
+}
+
+
+
+#producto{
+  z-index:-20;
+
+}
+
+
+#svg2{
+  background-image: url("../images/fondoCirculos.jpg");
+  background-size:20%;
+  background-repeat: repeat;
+  vertical-align:top;
+}
+
+/*///////////////////////NSOTOROS///////////////////////*/
+.negro{
+  color:rgb(46, 46, 46);
+}
+
+.fondonaranja{
+  background-color:#e26d12;
+}
+
+
+.subtituloDeCategoria{
+  color:white
+}
+/*///////////////////////NUESTROS PRODUCTPS///////////////////////*/
+
+.promocion{
+  width:27%;
+  display:flex;
+  flex-direction: row;
+  margin:3% 1%;
+
+}
+
+
+#imagenCategoria{
+  width:30vh;
+  max-height: 300px;
+  text-align:center;
+  padding:0;
+  border-bottom-left-radius: 4000px;
+  background-image: url(../images/novedades/Categoria1.PNG);
+  display: inline-block;
+}
+
+#textoCategoria{
+  width:70vh;
+  padding:0 0.5rem;
+}
+
+.titulo{
+  font-family: "librebaskerville-bold", serif;
+  color:white;
+  text-shadow: 1px 1px rgb(112, 112, 112);
+  margin:0;
+  line-height:1;
+}
+
+
+
+
+
+.subtituloDeCategoria{
+  font-family: "librebaskerville-regular", serif;
+  font-size: 1.5rem;
+}
+
+@media (max-width:760px){
+  .promocion{
+    width:90%;
+  }
+}

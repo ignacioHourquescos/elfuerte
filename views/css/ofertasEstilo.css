@@ -1,0 +1,208 @@
+@font-face {
+    font-family: "montserrat-regular";
+    src: url("../fonts/montserrat/montserrat-regular-webfont.woff2") format("woff2"), url("../fonts/montserrat/montserrat-regular-webfont.woff") format("woff");
+    font-style: normal;
+    font-weight: normal;
+  }
+
+
+/*////////////////////////////////////////////FONDO*/
+/*--------- CUSTOM LAYOUT ---------*/
+
+
+body {
+	width:100%;
+	text-align: center;
+	margin:0px;
+    padding:0px;    
+}
+
+
+.cabecera{
+    background-color: #000000;
+    background-image: linear-gradient( 135deg, orange 25%, transparent 25%, transparent 50%, orange 50%,orange 75%, transparent 75%, transparent);
+    background-size: 10px 10px;
+
+	height:15rem;
+	margin:0px;
+	padding:5vh;
+    padding-bottom:10vh;
+    margin-bottom:3rem;
+}
+  
+  
+.cabecera h1{
+    font-family: "librebaskerville-bold", serif;
+    
+	font-size: 4.8rem;
+	color:white;
+	text-shadow: 2px 2px 4px #000000;
+	font-style: normal;
+	text-rendering: optimizeLegibility;
+}
+  
+.cabecera h2{
+	font-size:4vmin;
+	text-align:center;
+	color:white;
+	text-shadow: 1px 1px 2px #000000;
+} 
+
+/*///////////////////////////////TITULO Y SIBTITULO*/
+
+.container-fluid #titulo{
+   background-color:black;
+    color:rgb(255, 255, 255);
+    font-family: "librebaskerville-bold", serif;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    padding-top:2rem;
+    margin:0 8rem;
+    font-size:8vmin;
+    padding-bottom:2rem;
+    text-shadow: 4px 4px 8px rgb(12, 12, 12);
+    transform: skewY(-2deg) translateY(+2rem);
+    z-index:1;
+
+   
+}
+.container-fluid #subtitulo{
+    /* background-image: linear-gradient( 45deg, orange 25%, transparent 25%, transparent 50%, orange 50%,orange 75%, transparent 75%, transparent); */
+    background-color: orange;
+    font-style: italic;
+    background-size: 5px 5px;
+    margin:0 8rem;
+    color:rgb(0, 0, 0);
+    font-size:2.5rem;
+    text-align:right;
+    padding-top:2rem;
+}
+
+
+.intro-wrap {
+    margin-bottom:5rem;
+}
+
+
+/*///////////////////////////////KITS y OFERTAS */
+.titulo{
+    background-color: black;
+    text-align: center;
+    padding:0.4em 0;
+    color:whitesmoke;
+    font-size: 1.5rem;
+    letter-spacing: 0px;
+
+
+}
+
+.precio{
+  text-align: right;
+  font-size:4em;  
+  color:orangered;
+  padding-top:0.25em;
+  padding-bottom: 0.5em;
+  padding-right: 0.5em;
+}
+
+.detalle{
+   color:black;
+   font-size:1.3rem;
+   height:5em;  
+   text-align:center;
+   letter-spacing: 0.1rem;
+}
+
+
+
+.imagenOferta, .imagenKit{
+    height:30vh;
+}
+
+.rectanguloOferta{
+   
+   -webkit-box-shadow: 6px 6px 7px -2px rgba(161,161,161,0.57);
+   -moz-box-shadow: 6px 6px 7px -2px rgba(161,161,161,0.57);
+   box-shadow: 6px 6px 7px -2px rgba(161,161,161,0.57);
+   background-color: white;
+}
+
+.ofertas {
+    justify-content: left;
+}
+
+.kits {
+    justify-content: left;;
+}
+
+#plantilla7, #plantilla1, #plantilla2, #plantilla3, #plantilla4, #plantilla5, #plantilla6, #plantilla{
+  padding:1px;
+
+}
+
+/*/////////////////////////RESPONSIVE//*/
+@media only screen and (max-width: 450px) {
+    section .container-fluid{
+    padding:0px;
+    margin:0px;
+    }
+
+    .intro-wrap{
+        padding:0px;
+        margin:0px;
+    }
+    section{
+        padding:0px;
+        margin:0px;
+    }
+
+    .precio{
+        font-size:1.5rem;  
+        text-align:center;
+        padding-right: 0
+
+    }
+    #irALista >h1{
+        font-size:1.5rem;  
+        text-align:center;
+        padding-right: 0
+    }
+    .cabecera{
+        padding-top:8em;
+        padding-bottom:10em;
+    }
+    .cabecera h1{
+        font-size:2.2rem;
+    }
+
+    .imagenOferta, .imagenKit{
+        height:12vh;
+    }
+    .container-fluid #subtitulo{
+        font-size:1rem;
+        margin:0px;
+        
+    }
+
+    .detalle{
+        font-size:0.8rem;
+    }
+    .titulo{
+        font-size:1rem;
+    }
+    .container-fluid #titulo{
+        padding-top:0.5rem;
+        font-size:2rem;
+        padding-bottom:0.5rem;
+        margin:0;
+       
+    }
+  
+  }
+
+
+  img:hover{
+    transition: .5s;
+  transform: scale(1.1);
+  z-index:10;
+}

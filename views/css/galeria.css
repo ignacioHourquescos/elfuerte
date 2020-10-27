@@ -1,0 +1,58 @@
+.gallery {
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+    -webkit-column-width: 33%;
+    -moz-column-width: 33%;
+    column-width: 33%; 
+  }
+  .gallery .pics {
+    -webkit-transition: all 350ms ease;
+    transition: all 350ms ease;
+  }
+    
+  .gallery .animation {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1); 
+  }
+    
+  @media (max-width: 450px) {
+    .gallery {
+    -webkit-column-count: 1;
+    -moz-column-count: 1;
+    column-count: 1;
+  
+    }
+  
+  }
+    
+  
+  @media only screen and (max-width: 400px){
+    #divGaleria{
+      padding:1rem;
+    }
+  }
+  
+  
+    @media (max-width: 400px) {
+    .btn.filter {
+    padding-left: 1.1rem;
+    padding-right: 1.1rem;
+    }
+  }
+  @media only screen and (min-width: 600px){
+    #divGaleria{
+      padding:10rem 10rem;
+      padding-bottom: 5rem;
+    }
+  }
+
+.img-fluid:hover{
+    transition: .5s;
+  transform: scale(1.1);
+  z-index:10;
+}
+
+
+/*****************efectos en botonoes ****************/
