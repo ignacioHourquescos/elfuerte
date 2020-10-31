@@ -1,115 +1,309 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="UTF-8">
-		<meta name="format-detection" content="telephone=no">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" >
-		<title>Lista de precios</title>
-		<link rel="stylesheet" 		href="./views/css/base.css">
-		<link rel="stylesheet" 		href="./views/css/vendor.css">
-		<link rel="stylesheet" 		href="./views/css/main.css">
-		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-		<script src="../js/src/jquery.js"></script>
-		<script src="../js/src/helpers.js"></script>
-		<script src="../js/src/modernizr.js"></script>
-		<script src="..js/src/pace.min.js"></script>
-		<!-- Global site tag (gtag.js) - Google Analytics -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-179250562-2"></script>
-		<!-- Global site tag (gtag.js) - Google Ads: 963730457 -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-963730457"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'AW-963730457');
-</script>
-<!-- Event snippet for Website sale conversion page -->
-<script>
-	gtag('event', 'conversion', {
-		'send_to': 'AW-963730457/bIxHCP_s5OIBEJm4xcsD',
-		'transaction_id': ''
-	});
-  </script>
-  
-
-		<script>
-		  window.dataLayer = window.dataLayer || [];
-		  function gtag(){dataLayer.push(arguments);}
-		  gtag('js', new Date());
-		
-		  gtag('config', 'UA-179250562-2');
-		</script>
+<html class="no-js" lang="es">
+<head>
 
 
-		<link rel="stylesheet" type="text/css" href="../css/main.css">
-		<link rel="stylesheet" type="text/css" href="../css/listas.css">
-	</head>
+<title>El Fuerte</title>
+
+<!--METADATA-->
+<meta charset="UTF-8">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" 		content="Distribuidora frutos secos mayorista, atencion a dieteticas">
+<meta name="viewport" 			content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="keywords" 			content="frutos secos, frutos deshidratados, Legumbres, semillas, Especias, Condimentos, Reposteria">
+<meta name="author" 			content="Sideral.dev">
+<meta property="og:type" 		content="website" />
+<meta property="og:title" 		content="Mayorista El Fuerte" />
+<meta property="og:description" content="Distribuidora mayorista de Frutos Secos" />
+<meta property="og:url" 		content="https://www.mayoristaelfuerte.com" />
+<meta property="og:site_name" 	content="Mayorista El Fuerte" />
+<meta name="twitter:title" 		content="Mayorista El Fuerte">
+<meta name="twitter:description"content="Distribuidora de frutos secos">
+<meta name="twitter:image"		content="https://www.libreria770.com/images/fondoNaranja.jpg">
+<link rel="icon" 				type="image/png" href="/images/fondoNaranja.jpg"/>
+<!--STYLESHEETS-->
+<link rel="stylesheet" 		href="../css/base.css">
+<link rel="stylesheet" 		href="../css/vendor.css">
+<link rel="stylesheet" 		href="../css/main.css">
+<link rel="stylesheet" 		href="../css/personal.css">
+<link rel="stylesheet" 		href="../css/index.css">
+
+<link rel="stylesheet" 		href="../css/listas.css">
 
 
-<body>
-<!--Div where the WhatsApp will be rendered-->
+<!-- sticky header          --><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"> 
+<!-- sticky header          --><link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.16.0/dist/bootstrap-table.min.css"> 
+<!-- sticky header          --><link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.17.1/dist/extensions/sticky-header/bootstrap-table-sticky-header.css" rel="stylesheet">
+<!-- sticky header          --><link rel="stylesheet" href="https://unpkg.com/placeholder-loading/dist/css/placeholder-loading.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/placeholder-loading/dist/css/placeholder-loading.min.css">
+<!-- jquery                 --><script src="../js/src/jquery.js"></script>
+<!-- helpers                --><script src="../js/src/helpers.js"></script>
+<!-- sticky header          --><script src="https://code.jquery.com/jquery-3.3.1.min.js"> </script> 
+<!-- sticky header          --><script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"> </script> 
+<!-- sticky header          --><script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"> </script> 
+<!-- sticky header          --><script src="https://unpkg.com/bootstrap-table@1.16.0/dist/bootstrap-table.min.js"> </script> 
+<!-- sticky header          --><script src="https://unpkg.com/bootstrap-table@1.17.1/dist/extensions/sticky-header/bootstrap-table-sticky-header.min.js"></script>
+<!-- exportacion            --><script src="https://unpkg.com/tableexport.jquery.plugin/tableExport.min.js"></script>
+<!-- exportacion            --><script src="https://unpkg.com/tableexport.jquery.plugin/libs/jsPDF/jspdf.min.js"></script>
+<!-- exportacion            --><script src="https://unpkg.com/tableexport.jquery.plugin/libs/jsPDF-AutoTable/jspdf.plugin.autotable.js"></script>
+<!-- exportacion            --><script src="https://unpkg.com/bootstrap-table@1.17.1/dist/extensions/export/bootstrap-table-export.min.js"></script>
+<!-- fija columna 1         --><script src="https://unpkg.com/bootstrap-table@1.17.1/dist/extensions/fixed-columns/bootstrap-table-fixed-columns.min.js"></script>
+<!-- table para mobile      --><script src="https://unpkg.com/bootstrap-table@1.17.1/dist/extensions/mobile/bootstrap-table-mobile.min.js"></script>
+<!-- print pantalla         --><script src="https://unpkg.com/bootstrap-table@1.17.1/dist/extensions/print/bootstrap-table-print.min.js"></script>
+<!-- loading template       --><link href="https://unpkg.com/placeholder-loading/dist/css/placeholder-loading.min.css" rel="stylesheet">
+<!-- group by column        --><script src="https://unpkg.com/bootstrap-table@1.18.0/dist/extensions/group-by-v2/bootstrap-table-group-by.min.js"></script> 
+<link rel="stylesheet" href="../css/micons/micons.css">
+<link rel="stylesheet" type="text/css" href="../css/style.css">
+<link rel="stylesheet" type="text/css" href="../css/main.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="../css/personal.css">
 
 
-<!-- SIDE MENU
-================================================== -->
- <!-- <header>
+
+</head>
 
 
-	<a id="header-menu-trigger" href="#0">
-		  <span class="header-menu-text">Menu</span>
-		   <span class="header-menu-icon"></span>
+
+
+<!-- WPP BUTTON ================================================== -->
+<div id="WAButton" style="font-family: Arial, Helvetica, sans-serif; z-index:10;"></div>
+<div ><a id="llamar" href="tel:1145523070">LLAMANOS!</a></div>
+
+
+<!-- SIDE MENU================================================== -->
+<header>
+<a id="header-menu-trigger" href="#0">
+		<span class="header-menu-text">Menu</span>
+		<span class="header-menu-icon"></span>
 	</a> 
-	<nav id="menu-nav-wrap" style="text-align:left;">
+	<nav id="menu-nav-wrap">
 		<a href="#0" class="close-button" title="close"><span>Close</span></a>	
-		<h3>Renova</h3>  
-		<ul class="nav-list">
-			<li><a class="" href="../../index.html" 		title="">Home</a></li>
-			<li><a class="" href="listas.html"				title="">Listas</a></li>
-			<li><a class="" href="login.html" 			title="">Ofertas</a></li>
-			<li><a class="" href="faq.html" 				title="">Abrir un lubricentro</a></li>				
-		</ul>		
-	 </nav> 
+		<h3>Motornova</h3>  
+		 <ul class="nav-list">
+			 <li class="current"><a class="smoothscroll" href="#home" title="">Home</a></li>
+			 <li><a class="" href="#nuestrosServicios" title="">Nuestros Servicios</a></li>
+			 <li><a class="" href="#mapa" title="">Donde estamos</a></li>
+			 <li><a class="" href="#Promociones" title="">Promociones</a></li>
+			 <!-- <li><a class="" href="views/html/resumenDeCuenta.html" title="" style="color:orange">Ingresar a mi cuenta</a></li>						 -->
+		 </ul>	
+	 </nav>  <!-- end #menu-nav-wrap -->
 
-</header>     -->
-
-
-
+</header> <!-- end header -->  
 
 
-<!-- SECCION DE LISTAS
+<!-- LSITA DE PRECIOS
 ================================================== -->
+<section id="productosDestacados">
+	<div class="tituloSeccion azul">
+		<h1>Listas de Precios</h1>
+	</div>
+	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 150"><path fill="#2a2d34" fill-opacity="1" d="M0,32L1440,96L1440,0L0,0Z"></path></svg>
 
-<body>
+	<div id="table_container">
+		<div class="toolbar">
+			<select id="select" class="form-control" name="filterAlgorithm">
+			  <option value="Frutos secos" selected>Frutos Secos</option>
+			  <option value="or">or</option>
+			</select>
+			<button class="btn btn-secondary" id="filterBy">filterBy</button>
+		  </div>
+
+			<table	class="border-success"  style="background-color:rgb(255, 255, 255)" width=100%  id="myTable"
+					data-buttons-class="danger"
+					data-mobile-responsive="true"
+					data-search-selector="#customSearch"
+					data-search-align="left"
+					data-search="true"
+					data-search-placeholder="buscar"
+					data-show-export="true"
+					data-show-columns="true"
+					data-key-events="true"
+					data-fixed-columns="true" 
+					data-show-print="true"					 
+					data-toolbar-align="left"
+				
+					data-group-by-field="r"
+					data-loading-template="loadingTemplate">
+					<thead > 
+					  <tr> 	
 
 
-<section>
-<div class="container-fluid cabecera"> 
-		<h1 id="nombreLista">Listas De Precios</h1>
-		<h3  style="color:rgb(255, 0, 0);transform:translateY(-1rem);">TODOS PRECIOS FINALES!</h3>
-		<h2 id="ultimaActualizacion"></h2>
-</div>
+<th data-field="gsx$codigo.$t" 			data-width-unit="%" >							<span>Codigo		  	</span style="text-align: center;">	</th> 
+<th data-field="gsx$descripcion.$t"  						class="text-wrap">  		Nombre					</span style="text-align: left;"> 	</th> 
+<th data-field="gsx$presentacion.$t"   	data-width-unit="%"	data-card-visible="false">  Presentacion											</th> 
+<th data-field="gsx$precio.$t"  							data-align="center">  		Precio	 													</th>  
+<th data-field="gsx$origen.$t" 								data-align="center">  		Origen														</th>  
+<th data-field="gsx$categoria.$t" 	data-title="categoria" fields="categoria"						data-align="center">  		Categoria														</th>  
+					 
 
-	<div class="competenciaPlantilla competencia">
-			<div class="card" id="card1">
-				<h2><a class="link titulo" href="listaEspecifica2.html?id="></a></h2>
-				<h3 class="aumento"></h3>
-			</div>
-		</div>		
-	<div class="competencias"><a class="link titulo" href="listaEspecifica2.html?id=" ></a></div>
+					</tr> 
+				</thead> 
+			</table> 
+			</div>		
+			
+			
+
+	</div>
+
+
 </section>
 
-<div class="spinner-border" role="status">
-	<span class="sr-only" style="color:black;">Loading...</span>
+
+
+<!-- NOVEDADES
+================================================== -->
+<section>
+<svg id="svg2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 150"> productos destacados
+	<path fill="#e26d12" fill-opacity="1" d="M0,128L80,128C160,128,320,128,480,106.7C640,85,800,43,960,37.3C1120,32,1280,64,1360,80L1440,96L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z">
+
+</path></svg>
+<div class="tituloSeccion fondonaranja">
+	<h1>Nuestros Productos</h1>
 </div>
+	<div class="fluido fondonaranja">
+		<div class="contenedor">
+			
+
+			<div class="promocion">
+				<div id="imagenCategoria"></div>
+				<div style="margin:10px" id="textoCateogria">
+					<h1 class="titulo">Categoria</h1>
+					<h3 class="subtituloDeCategoria">listado 3 productos de categorias</h3>
+				</div>
+			</div>
+
+			<div class="promocion">
+				<div id="imagenCategoria"></div>
+				<div style="margin:10px" id="textoCateogria">
+					<h1 class="titulo">Categoria</h1>
+					<h3 class="subtituloDeCategoria">listado 3 productos de categorias</h3>
+				</div>
+			</div>
+
+			<div class="promocion">
+				<div id="imagenCategoria"></div>
+				<div style="margin:10px" id="textoCateogria">
+					<h1 class="titulo">Categoria</h1>
+					<h3 class="subtituloDeCategoria">listado 3 productos de categorias</h3>
+				</div>
+			</div>
+
+			<div class="promocion">
+				<div id="imagenCategoria"></div>
+				<div style="margin:10px" id="textoCateogria">
+					<h1 class="titulo">Categoria</h1>
+					<h3 class="subtituloDeCategoria">listado 3 productos de categorias</h3>
+				</div>
+			</div>
+
+			<div class="promocion">
+				<div id="imagenCategoria"></div>
+				<div style="margin:10px" id="textoCateogria">
+					<h1 class="titulo">Categoria</h1>
+					<h3 class="subtituloDeCategoria">listado 3 productos de categorias</h3>
+				</div>
+			</div>
+			
+			<div class="promocion">
+				<div id="imagenCategoria"></div>
+				<div style="margin:10px" id="textoCateogria">
+					<h1 class="titulo">Categoria</h1>
+					<h3 class="subtituloDeCategoria">listado 3 productos de categorias</h3>
+				</div>
+			</div>
+
+			<div class="promocion">
+				<div id="imagenCategoria"></div>
+				<div style="margin:10px" id="textoCateogria">
+					<h1 class="titulo">Categoria</h1>
+					<h3 class="subtituloDeCategoria">listado 3 productos de categorias</h3>
+				</div>
+			</div>
+
+			<div class="promocion">
+				<div id="imagenCategoria"></div>
+				<div style="margin:10px" id="textoCateogria">
+					<h1 class="titulo">Categoria</h1>
+					<h3 class="subtituloDeCategoria">listado 3 productos de categorias</h3>
+				</div>
+			</div>
+
+			<div class="promocion">
+				<div id="imagenCategoria"></div>
+				<div style="margin:10px" id="textoCateogria">
+					<h1 class="titulo">Categoria</h1>
+					<h3 class="subtituloDeCategoria">listado 3 productos de categorias</h3>
+				</div>
+			</div>
+
+	
+
+
+
+		</div>
+	</div>
+</section>
+
+
+
+<!-- footer
+================================================== -->
+<footer>
+	 	<div class="footer-main">
+   		<div class="row">  
+	  	<div class="col-three tab-full footer-about">       
+				<h4 class="h05">MAYORISTA EL FUERTE</h4>
+				<p class="col-nine"><a href="" target="_F960AFIPInfo">QR A DEFINIR<img src="http://www.afip.gob.ar/images/f960/DATAWEB.jpg" id="qrAfip" ></a></p>	            
+
+			  </div> <!-- end footer-about -->
+
+		  	<div class="col-three tab-full footer-social">
+
+		  		<h4 class="h05">Seguinos</h4>
+
+		  		<ul class="list-links">
+		  				<li><a href="#">Mail</a></li>
+						  <li><a href="#">Facebook</a></li>
+						  <li><a href="#">Google</a></li>
+										
+					</ul>
+
+		  	</div> 
+
+		  </div> <!-- end row -->
+
+   	</div> <!-- end footer-main -->
+
+   	<div class="footer-bottom">
+	</div> <!-- end footer-main -->
+	<div class="footer-bottom">
+		<div class="row">
+			<div class="col-twelve">
+				<div class="copyright">
+					<span>crafted by <a href="http://www.sideral.dev/" style="color:yellowgreen">sideral.dev</a></span>
+				</div>
+			</div>
+		</div>
+	</div> <!-- end footer-bottom -->
+</footer>
+
+
+<!-- Java Script
+================================================== --> 
 
 
 </body>
 
+<script   type="module"  src="../js/listaService.js"></script>
 
 
-<script src="../js/src/helpers.js"></script>
-<script src="../js/src/plugins.js"></script>
-<script src="../js/src/main.js"></script>
-<script src="../js/listasService.js"></script>
 </html>
+
+
+
+
+
+
+
+
