@@ -29,7 +29,7 @@
 <link rel="stylesheet" 		href="../css/personal.css">
 <link rel="stylesheet" 		href="../css/index.css">
 
-<link rel="stylesheet" 		href="../css/listas.css">
+
 
 
 <!-- sticky header          --><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"> 
@@ -58,6 +58,7 @@
 <link rel="stylesheet" type="text/css" href="../css/main.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <link rel="stylesheet" type="text/css" href="../css/personal.css">
+<link rel="stylesheet" 		href="../css/listas.css">
 
 
 
@@ -101,12 +102,19 @@
 	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 150"><path fill="#2a2d34" fill-opacity="1" d="M0,32L1440,96L1440,0L0,0Z"></path></svg>
 
 	<div id="table_container">
-		<div class="toolbar">
-			<select id="select" class="form-control" name="filterAlgorithm">
-			  <option value="Frutos secos" selected>Frutos Secos</option>
-			  <option value="or">or</option>
+		<div class="toolbar" style="width:20%; font-size:1.7rem">
+			<select id="select" class="form-control" name="filterAlgorithm" id="formList">
+				<option value="Todas las Categorias" class="form-control">Todas las categorias</option>
+				<option value="Frutas glaseadas" class="form-control">Frutas glaseadas</option>
+				<option value="Frutos secos" class="form-control">Frutos Secos</option>
+				<option value="Alacena" class="form-control">Alacena</option>
+				<option value="Semillas" class="form-control">Semillas</option>
+				<option value="Naturista" class="form-control">Naturista</option>
+				<option value="Especias" class="form-control">Especias</option>
+				<option value="Reposteria" class="form-control">Reposteria</option>
+
 			</select>
-			<button class="btn btn-secondary" id="filterBy">filterBy</button>
+			<!-- <button class="btn btn-secondary" id="filterBy" >filterBy</button> -->
 		  </div>
 
 			<table	class="border-success"  style="background-color:rgb(255, 255, 255)" width=100%  id="myTable"
@@ -127,6 +135,7 @@
 					data-loading-template="loadingTemplate">
 					<thead > 
 					  <tr> 	
+						<th data-field="gsx$categoria.$t" 	data-title="categoria" fields="categoria"						data-align="center">  		Categoria														</th>  
 
 
 <th data-field="gsx$codigo.$t" 			data-width-unit="%" >							<span>Codigo		  	</span style="text-align: center;">	</th> 
@@ -134,7 +143,6 @@
 <th data-field="gsx$presentacion.$t"   	data-width-unit="%"	data-card-visible="false">  Presentacion											</th> 
 <th data-field="gsx$precio.$t"  							data-align="center">  		Precio	 													</th>  
 <th data-field="gsx$origen.$t" 								data-align="center">  		Origen														</th>  
-<th data-field="gsx$categoria.$t" 	data-title="categoria" fields="categoria"						data-align="center">  		Categoria														</th>  
 					 
 
 					</tr> 

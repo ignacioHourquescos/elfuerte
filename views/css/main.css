@@ -422,7 +422,8 @@ table {
   border-width: 0;
   width: 100%;
   max-width: 100%;
-  font-family: "librebaskerville-regular", sans-serif;
+  font-size:1.7rem;
+  
 }
 
 th,
@@ -438,7 +439,7 @@ th {
 }
 
 td {
-  line-height: 1.5;
+  line-height: 0.7;
 }
 
 th:first-child,
