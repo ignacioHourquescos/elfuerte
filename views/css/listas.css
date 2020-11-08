@@ -19,3 +19,9 @@ select.form-control:not([size]):not([multiple]) {
     border-radius: .25rem;
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
+
+.search-input{
+    background-color:rgb(247, 245, 245) !important;
+    border:1px rgb(230, 68, 68) solid !important;
+}
+
