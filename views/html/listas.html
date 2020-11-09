@@ -131,23 +131,22 @@
 				data-show-print="true"				 
 				data-toolbar-align="left"
 				data-show-header="true"
-				data-group-by="true"
-				data-group-by-field="gsx$categoria.$t">
+			>
 				<thead > 
 					  	<tr> 	
 							<th data-field="gsx$codigo.$t" 			data-width-unit="%" >							<span>Codigo		  	</span style="text-align: center;">	</th> 
 							<th data-field="gsx$descripcion.$t"  	class="text-wrap">  		Nombre					</span style="text-align: left;"> 	</th> 
 							<th data-field="gsx$presentacion.$t"   	data-width-unit="%"	data-card-visible="false">  Presentacion												</th> 
-							<!-- <th data-field="gsx$categoria.$t" 		data-title="categoria" fields="categoria"data-align="center">  		Categoria</th>    -->
+							<th data-field="gsx$categoria.$t" 		data-title="categoria" fields="categoria"data-align="center">  		Categoria</th>    -->
 							<th data-field="gsx$precio.$t"  		data-align="center">  		Precio	 													</th>  
-							<th data-field="gsx$origen.$t" 			data-align="center">  		Origen														</th>  
+							<!-- <th data-field="gsx$origen.$t" 			data-align="center">  		Origen														</th>  -->
+							<th data-field="operate" data-formatter="operateFormatter" data-events="operateEvents">+</th>
 						</tr> 
 				</thead> 
 			</table> 
 		</div>		
 	</div>
 </section>
-
 
 
 <!-- NOVEDADES
@@ -281,7 +280,7 @@
 </body>
 <script src="../js/src/plugins.js"></script>
 <script src="../js/src/main.js"></script>
-<script   type="module"  src="../js/listaService.js"></script>
+<script  src="../js/listaService.js"></script>
 
 
 
