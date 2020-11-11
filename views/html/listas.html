@@ -55,7 +55,7 @@
 <!-- group by column        --><script src="https://unpkg.com/bootstrap-table@1.18.0/dist/extensions/group-by-v2/bootstrap-table-group-by.min.js"></script> 
 
 <link rel="stylesheet" href="../css/micons/micons.css">
-
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <link rel="stylesheet" type="text/css" href="../css/main.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <link rel="stylesheet" type="text/css" href="../css/personal.css">
@@ -105,6 +105,7 @@
 <section id="productosDestacados">
 	<div class="tituloSeccion azul">
 		<h1>Listas de Precios</h1>
+		
 	</div>
 	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 150"><path fill="#2a2d34" fill-opacity="1" d="M0,32L1440,96L1440,0L0,0Z"></path></svg>
 
@@ -112,14 +113,16 @@
 		<div class="toolbar" style="width:20%; font-size:1.7rem">
 			<select id="select" class="form-control" name="filterAlgorithm" id="formList">
 				<option value="Todas las Categorias" class="form-control">Todas las categorias</option>
-				<option value="Frutas glaseadas" class="form-control">Frutas glaseadas</option>
-				<option value="Frutos secos" class="form-control">Frutos Secos</option>
-				<option value="Alacena" class="form-control">Alacena</option>
-				<option value="Semillas" class="form-control">Semillas</option>
-				<option value="Naturista" class="form-control">Naturista</option>
-				<option value="Especias" class="form-control">Especias</option>
-				<option value="Reposteria" class="form-control">Reposteria</option>
-
+				<option value="1. Fruta seca y desecada" class="form-control">Fruta Seca y Desecada</option>
+				<option value="2. Fruta Glaseada" class="form-control">Fruta Glaseada</option>
+				<option value="3. Mix & Snacks" class="form-control">Mix & Snacks</option>
+				<option value="4. Legumbres & Arroces" class="form-control">Lagumbres & Arroces</option>
+				<option value="5. Semillas" class="form-control">Semillas</option>
+				<option value="6. Gourmet" class="form-control">Gourmet</option>
+				<option value="7. Almacen" class="form-control">Almacen</option>
+				<option value="8. Suplementos" class="form-control">Suplementos</option>
+				<option value="9. Especias" class="form-control">Especias</option>
+				<option value="10. Chocolate" class="form-control">Chocolate</option>
 			</select>
 			<!-- <button class="btn btn-secondary" id="filterBy" >filterBy</button> -->
 		  </div>
@@ -136,15 +139,17 @@
 				data-show-print="true"				 
 				data-toolbar-align="left"
 				data-show-header="true"
+				data-group-by="true"
+				data-group-by-field="cate"	
 			>
 				<thead > 
 					  	<tr> 	
-							<th data-field="gsx$codigo.$t" 			data-width-unit="%" >							<span>Codigo		  	</span style="text-align: center;">	</th> 
-							<th data-field="gsx$descripcion.$t"  	class="text-wrap">  		Nombre					</span style="text-align: left;"> 	</th> 
-							<th data-field="gsx$presentacion.$t"   	data-width-unit="%"	data-card-visible="false">  Presentacion												</th> 
-							<th data-field="gsx$categoria.$t" 		data-title="categoria" fields="categoria"data-align="center">  		Categoria</th>    
-							<th data-field="gsx$precio.$t"  		data-align="center">  		Precio	 													</th>  
-							<!-- <th data-field="gsx$origen.$t" 			data-align="center">  		Origen														</th>  -->
+							<th data-field="codi" 			data-width-unit="%" >							<span>Codigo		  	</span style="text-align: center;">	</th> 
+							<th data-field="desc"  	class="text-wrap">  		Nombre					</span style="text-align: left;"> 	</th> 
+							<th data-field="pres"   	data-align="center" data-width-unit="%"	data-card-visible="false">  Presentacion												</th> 
+							<!-- <th data-field="cate" 		data-title="categoria" fields="categoria"data-align="center">  		Categoria</th>     -->
+							<th data-field="prec"  		data-align="center">  		Precio	 													</th>  
+							<th data-field="orig" 			data-align="center">  	</th> 
 							<th data-field="operate" data-formatter="operateFormatter" data-events="operateEvents">+</th>
 						</tr> 
 				</thead> 

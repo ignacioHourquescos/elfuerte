@@ -68,4 +68,10 @@ body{
   
 
 
- 
+  .info.groupBy{
+    font-family: "librebaskerville-bold", serif;
+    background-color:#212529;
+    color:white;
+    font-size:3rem;
+    padding:1rem;
+}
