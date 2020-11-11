@@ -150,6 +150,27 @@
 		}); 
 	};
 
+
+	var ssMenuOnScrolldown2 = function() {
+
+		var menuTrigger = $('#homeicon');
+
+		$WIN.on('scroll', function() {
+
+			if ($WIN.scrollTop() > 150) {				
+				menuTrigger.addClass('opaque');
+			}
+			else {				
+				menuTrigger.removeClass('opaque');
+			}
+
+		}); 
+	};
+
+
+
+
+
 	
   	/* OffCanvas Menu
 	 * ------------------------------------------------------ */
@@ -410,6 +431,7 @@
 		ssFlexSlider();
 		ssOwlCarousel();
 		ssMenuOnScrolldown();
+		ssMenuOnScrolldown2();
 		ssOffCanvas();
 		ssSmoothScroll();
 		ssPlaceholder();

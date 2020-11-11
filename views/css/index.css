@@ -186,3 +186,32 @@
     width:90%;
   }
 }
+
+
+
+
+#homeicon{
+  display: block;
+  position: fixed;
+  left: 32px;
+  top: 30px;
+  height: 42px;
+  width: 140px;
+  line-height: 42px;
+  font-family: "montserrat-regular", sans-serif;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  letter-spacing: .2rem;
+  color: rgba(255, 255, 255, 0.5);
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+#logo3{
+height:42px;
+padding:0.5rem;
+width:100% !important;
+}

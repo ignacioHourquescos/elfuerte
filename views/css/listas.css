@@ -2,6 +2,15 @@
 	padding:0 3rem;margin: 0 3rem;
 }
 
+@media (max-width:760px){
+    #table_container{
+        padding:0;margin: 0;
+    }
+    th td {
+        padding: 1.5rem 3rem !important;
+    }
+}
+
 select.form-control:not([size]):not([multiple]) {
     height: 100%; 
 }
@@ -25,3 +34,38 @@ select.form-control:not([size]):not([multiple]) {
     border:1px rgb(230, 68, 68) solid !important;
 }
 
+body{
+    margin:0;
+    padding:0;
+}
+
+
+#homeicon{
+    display: block;
+    position: fixed;
+    left: 32px;
+    top: 30px;
+    height: 42px;
+    width: 140px;
+    line-height: 42px;
+    font-family: "montserrat-regular", sans-serif;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    color: rgba(255, 255, 255, 0.5);
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  #logo{
+  height:42px;
+  padding:0.5rem;
+  width:100% !important;
+  }
+  
+
+
+ 

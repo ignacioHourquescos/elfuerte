@@ -55,7 +55,7 @@
 <!-- group by column        --><script src="https://unpkg.com/bootstrap-table@1.18.0/dist/extensions/group-by-v2/bootstrap-table-group-by.min.js"></script> 
 
 <link rel="stylesheet" href="../css/micons/micons.css">
-<link rel="stylesheet" type="text/css" href="../css/style.css">
+
 <link rel="stylesheet" type="text/css" href="../css/main.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <link rel="stylesheet" type="text/css" href="../css/personal.css">
@@ -73,9 +73,14 @@
 <!-- <div id="WAButton" style="font-family: Arial, Helvetica, sans-serif; z-index:10;"></div>
 <div ><a id="llamar" href="tel:1145523070">LLAMANOS!</a></div> -->
 <
-<body style="background-color:#111111;">>
+<body style="background-color:#111111;margin:0;padding:0">>
 <!-- SIDE MENU================================================== -->
 <header>
+<a id="homeicon" href="../../index.html">
+	<img id="logo" src="../images/logoRenova.png"></img>
+</a>
+
+
 <a id="header-menu-trigger" href="#0">
 		<span class="header-menu-text">Menu</span>
 		<span class="header-menu-icon"></span>
@@ -137,7 +142,7 @@
 							<th data-field="gsx$codigo.$t" 			data-width-unit="%" >							<span>Codigo		  	</span style="text-align: center;">	</th> 
 							<th data-field="gsx$descripcion.$t"  	class="text-wrap">  		Nombre					</span style="text-align: left;"> 	</th> 
 							<th data-field="gsx$presentacion.$t"   	data-width-unit="%"	data-card-visible="false">  Presentacion												</th> 
-							<th data-field="gsx$categoria.$t" 		data-title="categoria" fields="categoria"data-align="center">  		Categoria</th>    -->
+							<th data-field="gsx$categoria.$t" 		data-title="categoria" fields="categoria"data-align="center">  		Categoria</th>    
 							<th data-field="gsx$precio.$t"  		data-align="center">  		Precio	 													</th>  
 							<!-- <th data-field="gsx$origen.$t" 			data-align="center">  		Origen														</th>  -->
 							<th data-field="operate" data-formatter="operateFormatter" data-events="operateEvents">+</th>

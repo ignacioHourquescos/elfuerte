@@ -11,6 +11,7 @@ document.getElementById("select").addEventListener("click", function() {
  	$.getJSON('https://spreadsheets.google.com/feeds/list/1oEIH4yWEVMNmJOENvGau2Le9hGssFQss6RiFp7_EzFU/1/public/values?alt=json', function (data) {       
         var categoria_filtrada=document.getElementById("select").value;
         var dataFiltrada=data.feed.entry;
+        console.log(dataFiltrada);
         var dataFiltrada2;
         if(categoria_filtrada=="Todas las Categorias"){dataFiltrada2=dataFiltrada;}
         else{dataFiltrada2 = dataFiltrada.filter(function(producto) {
@@ -32,6 +33,10 @@ document.getElementById("select").addEventListener("click", function() {
 }
 
 
+
+
+
+
 function operateFormatter(value, row, index) {
     return [
      
@@ -42,8 +47,6 @@ function operateFormatter(value, row, index) {
       '</a>'
     ].join('')
   }
-
-
 
   window.operateEvents = {
     'click .like': function (e, value, row, index) {
@@ -56,13 +59,16 @@ function operateFormatter(value, row, index) {
       })
     }
   }
-// var first = document.createElement("H1");
 
-// $( document ).ready(function() {
-//     document.querySelector(".fixed-table-toolbar").appendChild(first);
-// });
-
-// fixed-table-toolbar
-// fixed-table-toolbar
  obtenerListaEspecifica();
+
+//escondo table header cuando es un celular, y si es en PC lo muestro
+if (window.matchMedia("(max-width: 600px)").matches) {
+  console.log("menos de 400px");
+  document.getElementById("myTable").removeAttribute("data-show-header");
+	
+} else {
+	console.log("mas de 400px");
+	document.getElementById("myTable").removeAttribute("data-show-header");
+}
 

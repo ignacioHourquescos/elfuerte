@@ -1324,6 +1324,10 @@ header .header-logo a {
 #header-menu-trigger:hover, #header-menu-trigger:focus {
   color: #FFFFFF;
 }
+
+#homeicon.opaque {
+  background-color: #000000;
+}
 #header-menu-trigger .header-menu-text {
   display: block;
   position: absolute;
