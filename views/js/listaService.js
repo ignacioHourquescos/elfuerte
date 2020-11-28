@@ -8,19 +8,24 @@ document.getElementById("select").addEventListener("click", function() {
 
 
 function obtenerListaEspecifica () {
-  $.getJSON('https://spreadsheets.google.com/feeds/list/1oEIH4yWEVMNmJOENvGau2Le9hGssFQss6RiFp7_EzFU/1/public/values?alt=json', function (data) {       
+  $.getJSON('https://spreadsheets.google.com/feeds/list/1JIm_6mWe8rJ3yTDX88LMUhKQkzGn9xvUpcMs15fJNSc/1/public/values?alt=json', function (data) {       
        var categoria_filtrada=document.getElementById("select").value;
-       var dataFiltrada=data.feed.entry;
+       var data=data.feed.entry;
        var array=[];
-       for (var i=0;i<dataFiltrada.length;i++){
+
+
+
+       for (var i=0;i<data.length;i++){
+        var lastUpdate = convertirFecha(data[i].gsx$fecha.$t);
         array.push({
-         "codi":dataFiltrada[i].gsx$codigo.$t,
-         "desc":dataFiltrada[i].gsx$descripcion.$t,
-         "pres":dataFiltrada[i].gsx$presentacion.$t,
-         "cate":dataFiltrada[i].gsx$categoria.$t,
-         "prec":dataFiltrada[i].gsx$precio.$t,
-         "orig":dataFiltrada[i].gsx$origen.$t,
-        "desc2":dataFiltrada[i].gsx$desc2.$t,
+         "codi":data[i].gsx$codigo.$t,
+         "desc":data[i].gsx$descripcion.$t,
+         "pres":data[i].gsx$presentacion.$t,
+         "cate":data[i].gsx$categoria.$t,
+         "fecha":lastUpdate,
+         "prec":data[i].gsx$precio.$t,
+         "orig":data[i].gsx$origen.$t,
+        "desc2":data[i].gsx$desc2.$t,
          });  
        }
       
@@ -54,7 +59,7 @@ function operateFormatter(value, row, index) {
      
       '</a>  ',
       '<a class="like" href="javascript:void(0)" title="Remove">',
-      '<i class="fa fa-info-circle"></i>',
+      '<i class="fa fa-info-circle" style="color:grey;"></i>',
 
       '</a>'
     ].join('')
@@ -76,16 +81,49 @@ function operateFormatter(value, row, index) {
 
 //escondo table header cuando es un celular, y si es en PC lo muestro
 if (window.matchMedia("(max-width: 600px)").matches) {
-  console.log("menos de 400px");
   document.getElementById("myTable").removeAttribute("data-show-header");
 	
 } else {
-	console.log("mas de 400px");
 	document.getElementById("myTable").removeAttribute("data-show-header");
 }
 
 
 
-////////////////SCROLLER A LA PALABRA
+//////////////// HANDLER DE FECHAS
+const convertirFecha = (fecha) => {
+  var dateParts = fecha.split("/");
+  var dateObject = new Date(+dateParts[2], dateParts[1] - 1, +dateParts[0]); 
+  const diffDays = Math.ceil(Math.abs(new Date() - dateObject) / (1000 * 60 * 60 * 24)); 
+  if (diffDays<7)
+    return ['<i class="fa fa-circle" style="color:red"></i>']
+  else
+    return ("")  
+
+}
 
 
+// function rowStyle(row, index) {
+//   console.log(index);
+//   var classes = [
+
+//     'bg-red'
+//   ]
+
+//   if (index % 2 === 0) {
+//     return {
+//       classes: classes[0]
+//     }
+//   }
+//   return {
+    
+//   }
+// }
+
+
+$( document ).ready(function() {
+  var fecha = document.getElementById("fecha");
+  if (fecha=="Esta semana") {
+    console.log("Algo estamos avanzando");
+  }
+
+});
