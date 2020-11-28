@@ -53,7 +53,6 @@
 <!-- print pantalla         --><script src="https://unpkg.com/bootstrap-table@1.17.1/dist/extensions/print/bootstrap-table-print.min.js"></script>
 <!-- loading template       --><link href="https://unpkg.com/placeholder-loading/dist/css/placeholder-loading.min.css" rel="stylesheet">
 <!-- group by column        --><script src="https://unpkg.com/bootstrap-table@1.18.0/dist/extensions/group-by-v2/bootstrap-table-group-by.min.js"></script> 
-<!-- row Style              --><link rel="stylesheet" href="https://s3-us-west-2.amazonaws.com/colors-css/2.2.0/colors.min.css">
 
 <link rel="stylesheet" href="../css/micons/micons.css">
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
@@ -119,8 +118,8 @@
 				<option value="3. Mix & Snacks" class="form-control">Mix & Snacks</option>
 				<option value="4. Legumbres & Arroces" class="form-control">Lagumbres & Arroces</option>
 				<option value="5. Semillas" class="form-control">Semillas</option>
-				<option value="6. Gourmet" class="form-control">Gourmet</option>
-				<option value="7. Almacen" class="form-control">Almacen</option>
+				<option value="7. Gourmet" class="form-control">Gourmet</option>
+				<option value="6. Almacen" class="form-control">Almacen</option>
 				<option value="8. Suplementos" class="form-control">Suplementos</option>
 				<option value="9. Especias" class="form-control">Especias</option>
 				<option value="10. Chocolate" class="form-control">Chocolate</option>
@@ -142,19 +141,18 @@
 				data-show-header="true"
 				data-group-by="true"
 				data-group-by-field="cate"	
-				data-row-style="rowStyle"
 			>
 				<thead > 
 					  	<tr> 	
-							<th data-field="codi" 			data-width-unit="%" >							<span>Codigo		  	</span style="text-align: center;">	</th> 
+							<th data-field="codi" 	data-width-unit="%" >							<span>Codigo		  	</span style="text-align: center;">	</th> 
 							
 							<th data-field="desc"  	class="text-wrap">  		Nombre					</span style="text-align: left;"> 	</th> 
-							<th data-field="pres"   	data-align="center" data-width-unit="%"	data-card-visible="false">  Presentacion												</th> 
-							<!-- <th data-field="cate" 		data-title="categoria" fields="categoria"data-align="center">  		Categoria</th>     -->
-							<th data-field="fecha"  id="fecha"		data-align="center">  														</th>  
+							<th data-field="pres"   data-align="center" data-width-unit="%"	data-card-visible="false">  Presentacion												</th> 
+							<!-- <th data-field="cate" 		data-title="categoria" fields="categoria"data-align="center">  		Categoria</th>     -->							
 							<th data-field="prec"  		data-align="center">  		Precio	 													</th>  				
-							<th data-field="orig" 			data-align="center">  	</th> 
+							<th data-field="orig" 			data-align="center">  Origen 	</th> 
 							<th data-field="operate" data-formatter="operateFormatter" data-events="operateEvents">+</th>
+							<th data-field="fecha"  id="fecha"		data-align="center">  	Estado												</th>  
 						</tr> 
 				</thead> 
 			</table> 

@@ -33,10 +33,22 @@ $('.carousel').carousel({
   mientras que en el verano baja levemente.",
   
   tituloServicios4:
-  "LOCAL",
+  "LOCAL Y MOBILIARIO",
   descServicios4:
-  "La ubicación es un factor clave a tener en cuenta cuando pensamos en abrir una dietética. Esto determinará\
-  que tipo de productos debemos comercializar y y el flujo de gente que entre al local.",
+  "Te ayudamos en el diseño del local, estética y mobiliario. Desde los recipientes para contener los productos\
+  hasta el diseño integral de los muebles en diferentes estilos.",
+
+  tituloServicios5:
+  "ESTACIONALIDAD DE LA DEMANDA",
+  descServicios5:
+  "El pico de demanda se registra en los meses de frío, mientras que en el verano la demanda baja levemente.\
+  De todas maneras hoy en dia se puede existen productos alterniativos que no dependen tanto de la estación ",
+
+  tituloServicios6:
+  "CONSERVACION DE LA MERCADERIA",
+  descServicios6:
+  "Los frutos secos, semillas y cerelaes deben ser conservados a temperaturas menores a los 22C°. Este factor es sumamente \
+  tenerlo en cuenta en el verano, ya que si no podremos vender mercadería en mal estado.",
   
   }
   
@@ -56,7 +68,10 @@ $('.carousel').carousel({
   inserstartextos("descServicios3",   constantes.descServicios3);
   inserstartextos("tituloServicios4", constantes.tituloServicios4);
   inserstartextos("descServicios4",   constantes.descServicios4);
-  
+  inserstartextos("tituloServicios5", constantes.tituloServicios5);
+  inserstartextos("descServicios5",   constantes.descServicios5);
+  inserstartextos("tituloServicios6", constantes.tituloServicios6);
+  inserstartextos("descServicios6",   constantes.descServicios6);
   
   
 

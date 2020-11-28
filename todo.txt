@@ -10,22 +10,27 @@ Qr de la afip. Lo tienen? La afip pide ponerlo en la web
 ----------------------------------------------------------------
 1.20
 
+
+
+
 - Dani  me tiene que pasar fotos
 
 
 ABRIR UNA DIETETICAL
+
+---------------------------------------------------------------
+1.00  - 30min
 10min - Agregar en intro tema de llave enmano
 2min  - son 20 dieteticas en 50 años
 30min - Agregar tema mobiliarios
 15min - Agregaar tema cuidado de mercaderia
----------------------------------------------------------------
-1.00
 
 LISTA DE PRECIOS 
+
+............................................................
+2.00 -2:10
 20min - Poner sin stock si no tiene precio
 90min - pintar de rojo las ultimas actulziaciones
-............................................................
-2.00
 
 
 

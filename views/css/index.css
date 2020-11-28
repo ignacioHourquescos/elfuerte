@@ -149,18 +149,33 @@
 }
 
 
-#imagenCategoria{
-  width:30vh;
-  max-height: 300px;
+.imagenCategoria{
+  width:30%;
+  height:100px;
   text-align:center;
   padding:0;
   border-bottom-left-radius: 4000px;
-  background-image: url(../images/novedades/Categoria1.PNG);
   display: inline-block;
 }
 
+.uno{  background-image: url(../images/categorias/uno.png);}
+.dos{  background-image: url(../images/categorias/dos.jpg);}
+.tres{  background-image: url(../images/categorias/tres.jfif);}
+.cuatro{  background-image: url(../images/categorias/cuatro.jpg);}
+.cinco{  background-image: url(../images/categorias/cinco.jfif);}
+.seis{  background-image: url(../images/categorias/seis.jfif);}
+.siete{  background-image: url(../images/categorias/siete.jfif);}
+.ocho{  background-image: url(../images/categorias/ocho.jfif);}
+.nueve{  background-image: url(../images/categorias/nueve.jpg);}
+.diez{  background-image: url(../images/categorias/diez.jpg);}
+
+
+
+
+
+
 #textoCategoria{
-  width:70vh;
+  width:70%;
   padding:0 0.5rem;
 }
 

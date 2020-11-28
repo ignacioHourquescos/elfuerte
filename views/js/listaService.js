@@ -22,10 +22,10 @@ function obtenerListaEspecifica () {
          "desc":data[i].gsx$descripcion.$t,
          "pres":data[i].gsx$presentacion.$t,
          "cate":data[i].gsx$categoria.$t,
-         "fecha":lastUpdate,
          "prec":data[i].gsx$precio.$t,
          "orig":data[i].gsx$origen.$t,
         "desc2":data[i].gsx$desc2.$t,
+        "fecha":lastUpdate,
          });  
        }
       
@@ -95,35 +95,11 @@ const convertirFecha = (fecha) => {
   var dateObject = new Date(+dateParts[2], dateParts[1] - 1, +dateParts[0]); 
   const diffDays = Math.ceil(Math.abs(new Date() - dateObject) / (1000 * 60 * 60 * 24)); 
   if (diffDays<7)
-    return ['<i class="fa fa-circle" style="color:red"></i>']
+    // return ['<i class="fa fa-circle" style="color:red">Lista</i>']
+      return ['<h4 style="color:red;">Modificado</h4>']
   else
     return ("")  
 
 }
 
 
-// function rowStyle(row, index) {
-//   console.log(index);
-//   var classes = [
-
-//     'bg-red'
-//   ]
-
-//   if (index % 2 === 0) {
-//     return {
-//       classes: classes[0]
-//     }
-//   }
-//   return {
-    
-//   }
-// }
-
-
-$( document ).ready(function() {
-  var fecha = document.getElementById("fecha");
-  if (fecha=="Esta semana") {
-    console.log("Algo estamos avanzando");
-  }
-
-});

@@ -1727,7 +1727,7 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
     -webkit-transform: translateX(0);
   }
   20% {
-    -webkit-transform: translateX(-5px);
+    -webkit-transform: X(-5px);
   }
   40% {
     -webkit-transform: translateX(20px);
