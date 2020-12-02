@@ -237,10 +237,11 @@ width:100% !important;
 #table_container{
   padding:0;;
   margin:0;
-  
+
   padding-bottom:0;
   margin-bottom:10rem;
   width:100%;
+
 }
 
 .carousel-caption > h5{
