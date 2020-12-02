@@ -230,3 +230,49 @@ height:42px;
 padding:0.5rem;
 width:100% !important;
 }
+
+
+
+
+#table_container{
+  padding:0;;
+  margin:0;
+  
+  padding-bottom:0;
+  margin-bottom:10rem;
+  width:100%;
+}
+
+.carousel-caption > h5{
+  font-size:6rem;
+  background-color:rgba(118, 118, 118, 0.337);
+}
+
+.carousel-caption > p{
+  font-size:2rem;
+  background-color:rgba(118, 118, 118, 0.337);
+}
+
+
+@media (max-width:770px){
+  #table_container{
+      padding:0rem;
+      margin: 3rem 0rem;
+      padding-bottom:0;
+     
+      width:100%;
+  }
+  .carousel-caption > h5{
+      font-size:2rem;
+  }
+  .container{
+    margin:0;
+    padding:0rem;
+  }
+  #carrousel{
+    margin:2rem 0;
+  }
+  
+}
+
+
