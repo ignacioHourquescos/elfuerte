@@ -1562,7 +1562,7 @@ header .header-logo a {
 
 .home-content-tablecell {
   display: table-cell;
-  vertical-align: middle;
+
   z-index: 500;
 }
 .home-content-tablecell .row {
