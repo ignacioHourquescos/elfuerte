@@ -110,10 +110,16 @@
   width:100%;
 }
 
+.flexrr{     
+    display:flex;
+}
 
 @media (max-width:760px){
   .contenedor{
     display:block;
+  }
+  .flexrr{
+      display:block;
   }
 
 }
@@ -329,6 +335,7 @@ margin:1rem;
   font-size:2rem;
   background-color:rgba(118, 118, 118, 0.337);
 }
+
 
 
 @media (max-width:770px){
