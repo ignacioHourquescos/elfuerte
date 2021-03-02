@@ -4,8 +4,8 @@
 ✅rever textos  20 min
  
 Seccion Loclales asesoradors 45 min
-    - hacer foto galeria diferentes tamaños
-    - boton abajo "quiero que me asesoren"
+ ✅   - hacer foto galeria diferentes tamaños
+ ✅   - boton abajo "quiero que me asesoren"
 
 Footer
    
