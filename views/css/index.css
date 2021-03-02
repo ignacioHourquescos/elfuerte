@@ -108,11 +108,15 @@
   margin:0;
   padding:0;
   width:100%;
-
-
 }
 
 
+@media (max-width:760px){
+  .contenedor{
+    display:block;
+  }
+
+}
 
 #producto{
   z-index:-20;
@@ -142,6 +146,41 @@
 
   }
 
+  .blanco{
+    color:rgb(192, 192, 192);
+    font-size:2rem;
+    line-height:2;
+    padding: 2rem 6rem;
+
+  }
+
+  @media (max-width:760px){
+    .blanco{
+        font-size:1.5rem;
+        line-height:2;
+        padding: 2rem 1rem;
+    }
+    .negro{
+        font-size:2rem;
+        line-height:2;
+        padding: 1rem 0.5rem;
+    }
+    #castillo{
+        padding:0 0;
+    }
+  }
+
+#imagen_galeria{
+    width:30%;
+    object-fit:contain;
+}
+@media (max-width:760px){
+    #imagen_galeria{
+      width:100%;
+    }
+  }
+
+
 #castillo{
     background-image: url(../images/FUERTE.PNG);
     background-repeat:no-repeat;
@@ -151,6 +190,13 @@
     height:100vh;
     padding:0 4rem;
 }
+
+@media (max-width:760px){
+
+    #castillo{
+        padding:0 0;
+    }
+  }
 
 
 .fondonaranja{
@@ -311,3 +357,52 @@ margin:1rem;
   
 }
 
+
+
+  #asesoramiento_button{
+    text-align:center;
+    font-family: "montserrat-regular", sans-serif;
+    color:white;
+    background-color: transparent;
+
+    padding:2rem;
+    border-radius:50px;
+    border:2px solid white;
+    margin-top:10rem;
+
+}
+
+#div_asesoramiento{
+    margin:4rem;
+}
+
+@media (max-width:760px){
+    #div_asesoramiento{
+      margin:8rem;
+    }
+  }
+
+  
+  #asesoramiento_button2{
+    text-align:center;
+    font-family: "montserrat-regular", sans-serif;
+    color:white;
+    background-color: transparent;
+
+    padding:2rem;
+    border-radius:50px;
+    border:2px solid white;
+    margin-top:10rem;
+
+}
+
+#div_asesoramiento2{
+    margin:4rem;
+    text-align:center;
+}
+
+@media (max-width:760px){
+    #div_asesoramiento2{
+      margin:8rem;
+    }
+  }
