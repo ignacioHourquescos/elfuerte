@@ -10,6 +10,10 @@
   padding:0 8rem;
 }
 
+#svg3{
+    background-color:#e26d12;
+}
+
 .subtitulo{
   font-family: "montserrat-bold", sans-serif;
   font-style: normal;
@@ -26,6 +30,26 @@
   text-align: center;
 }
 
+.descripcion2{
+    font-family: "librebaskerville-regular", serif;
+    font-size: 2.5rem;
+    text-align: center;
+    font-size:2.5rem;
+    line-height:2;
+    padding:0 4rem 4rem 4rem;
+  }
+  
+.carousel-control-prev-icon{
+    background-color:rgba(92, 92, 92, 0.745) !important;
+    padding:2rem;
+    border-radius:5rem;
+}
+
+.carousel-control-next-icon{
+    background-color:rgba(92, 92, 92, 0.475) !important;
+    padding:2rem;
+    border-radius:5rem;
+}
 
 @media (max-width:770px){
   #container{
@@ -52,6 +76,11 @@
   }
 }
 
+
+#nombre_dietetica{
+    font-family: "librebaskerville-bold", serif;
+    text-transform: none !important;
+}
 
 
 

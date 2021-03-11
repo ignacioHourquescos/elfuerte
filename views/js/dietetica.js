@@ -49,9 +49,31 @@ $('.carousel').carousel({
   descServicios6:
   "Los frutos secos, semillas y cerelaes deben ser conservados a temperaturas menores a los 22C°. Este factor es sumamente \
   tenerlo en cuenta en el verano, ya que si no podremos vender mercadería en mal estado.",
+
+  tituloServicios7:
+  "INVERSION INICIAL DE MERCADÍA",
+  descServicios7:
+  "Te ayudamos a planificar la inversión adecuada de acuerdo al presupuesto que manejes",
   
+
+  
+  tituloServicios8:
+  "CARACTERIZITCAS DEL LOCAL",
+  descServicios8:
+  "Te brindamos nuestro conocimiento en cuanto a las variables del local que son fundamentales, como el tamaño y la ubicación ",
+
+  tituloServicios9:
+  "GASTOS DE INSTALACIONES Y UTILES",
+  descServicios9:
+  "Gastos generales de la instalación y apertura de un local ",
+
+  tituloServicios10:
+  "GASTOS ADICIONALES",
+  descServicios10:
+  "Gastos adicionales varios que puedan existir según el caso en particular ",
   }
-  
+
+
 
   
   function inserstartextos(id,element){
@@ -72,7 +94,14 @@ $('.carousel').carousel({
   inserstartextos("descServicios5",   constantes.descServicios5);
   inserstartextos("tituloServicios6", constantes.tituloServicios6);
   inserstartextos("descServicios6",   constantes.descServicios6);
-  
+  inserstartextos("tituloServicios7", constantes.tituloServicios7);
+  inserstartextos("descServicios7",   constantes.descServicios7);
+  inserstartextos("tituloServicios8", constantes.tituloServicios8);
+  inserstartextos("descServicios8",   constantes.descServicios8);
+  inserstartextos("tituloServicios9", constantes.tituloServicios9);
+  inserstartextos("descServicios9",   constantes.descServicios9);
+  inserstartextos("tituloServicios10", constantes.tituloServicios10);
+  inserstartextos("descServicios10",   constantes.descServicios10);
   
 
   

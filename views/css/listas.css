@@ -16,7 +16,7 @@ select.form-control:not([size]):not([multiple]) {
 }
 
 .form-control {
-    display: block;
+    left:2rem;
     width: 100%;
     padding: .375rem .75rem;
     font-size: 2rem;
@@ -30,10 +30,15 @@ select.form-control:not([size]):not([multiple]) {
 }
 
 .search-input{
+    width:100%;
     background-color:rgb(247, 245, 245) !important;
-    border:1px rgb(230, 68, 68) solid !important;
+     border:1px rgb(32, 32, 32) solid !important; */
+ 
 }
 
+.search-input::placeholder{
+    color:rgb(247, 245, 245) !important;
+}
 body{
     margin:0;
     padding:0;

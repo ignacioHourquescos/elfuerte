@@ -1,4 +1,7 @@
 
+// function cambiaridioma(){
+//  getElementsByClassName("search-input").placeholder="Buscar";
+// }
 
 
 document.getElementById("select").addEventListener("click", function() {
@@ -99,5 +102,6 @@ const convertirFecha = (fecha) => {
     return ("")  
 
 }
+
 
 
