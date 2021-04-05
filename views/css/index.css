@@ -130,6 +130,47 @@
 
 }
 
+#contenedor22{
+    display:flex; 
+    flex-direction:row; 
+    width:100%; 
+    justify-content:space-around;
+}
+
+
+
+#servicios22{
+    display:flex; 
+    flex-direction:column; 
+    align-content:center;
+     align-items:center; 
+     width:50%; 
+     padding:2rem;
+}
+
+
+@media (max-width:760px){
+    #contenedor22{
+        width:100%;
+        flex-direction:column;
+    }
+    #servicios22{
+        width:100%;
+        padding:0 0.5rem;
+
+    }
+    #servicios22 h2{
+            font-size:1.4rem !important;
+        
+    }
+    #servicios22 p{
+        font-size:1.2rem !important;
+    
+}
+}
+
+
+
 
 #svg2{
   background-image: url("../images/fondoCirculos.jpg");
@@ -168,13 +209,14 @@
         padding: 2rem 1rem;
     }
     .negro{
-        font-size:2rem;
+        font-size:1.7rem;
         line-height:2;
-        padding: 1rem 0.5rem;
+        padding: 1rem 0.1rem;
     }
     #castillo{
         padding:0 0;
     }
+
   }
 
 #imagen_galeria{

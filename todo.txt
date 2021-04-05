@@ -108,18 +108,18 @@ La dirección sería Charcas 2227
 
 
 //////////////////////////////////////////////
-- poner contraseña: 2522
-- en la web no aprezcan cenavos
+✅ poner contraseña: 2522
+✅ en la web no aprezcan cenavos
 - que dicen de nosotros - 
-    "Cumplen con los dias de entrega, son medio fijos"
-    "siemrpe cuentan con stock"
-    "buen asesoramiento y servicio"
-- Curry => que se vea mejor
-- Alamamora => Hierba Mora
-- Pilar de vida => tu vida Sana
-- Casa coquit0 agregar foto
+    ✅"Cumplen con los dias de entrega, son medio fijos"
+    ✅ "siemrpe cuentan con stock"
+    ✅ "buen asesoramiento y servicio"
+ ✅- Curry => que se vea mejor
+ ✅- Alamamora => Hierba Mora
+ ✅- Pilar de vida => tu vida Sana
+ ✅- Casa coquit0 agregar foto
 
-- Contacto => que te lleve al fomulario
+ ✅ - Contacto => que te lleve al fomulario
 
 
 

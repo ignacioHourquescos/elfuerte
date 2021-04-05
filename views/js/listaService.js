@@ -23,7 +23,7 @@ function obtenerListaEspecifica () {
          "desc":data[i].gsx$descripcion.$t,
          "pres":data[i].gsx$presentacion.$t,
          "cate":data[i].gsx$categoria.$t,
-         "prec":data[i].gsx$precio.$t,
+         "prec":'$'+parseInt(data[i].gsx$precio.$t),
          "orig":data[i].gsx$origen.$t,
          "desc2":data[i].gsx$desc2.$t,
         "fecha":lastUpdate,
@@ -97,7 +97,7 @@ const convertirFecha = (fecha) => {
   const diffDays = Math.ceil(Math.abs(new Date() - dateObject) / (1000 * 60 * 60 * 24)); 
   if (diffDays<30)
     // return ['<i class="fa fa-circle" style="color:red">Lista</i>']
-      return ['<h4 style="color:red;">Modificado</h4>']
+      return ['<h4 style="color:red;">Modificado hace '+diffDays+' dias</h4>']
   else
     return ("")  
 
