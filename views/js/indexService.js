@@ -1,7 +1,11 @@
 const constantes = {
-    nosotros: "En el año 1967 abrimos un pequeño local en el corazón de Villa Urquiza. \
-    Estableciendo contacto con proveedores e importadores, fuimos pasando de ser una galletiteria de barrio a una distribuidora mayorista   \
-    Somos El Fuerte, abastecemos dieteticas, el rubro gastronomico y comercios en Buenos Aires e interior del país.",
+
+
+    nosotros: "  En el año 1967 abrimos una pequeña galletiteria, con los años nos orientamos hacia el rubro de dietéticas, \
+    estableciendo contacto con proveedores e importadores. Eso nos llevó a abrir sucursales y \
+    crear nuestra distribuidora mayorista. Somos EL FUERTE atendemos dieteticas, gastronomicos,\
+     panaderías y a revendedores, en CABA, gran Buenos Aires y en el interior del país.",
+
 
     tituloServicios1: "MAYORISTA DE FRUTAS SECAS Y PRODUCTOS PARA DIETËTICAS",
     descServicios1: "Amplio súrtido de productos nacionales e importados. Entrega en Capital Federal y Gran Buenos Aires. Entregas al interior via encomienda. Acceda a nuestra lista de precios",
