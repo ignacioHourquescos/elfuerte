@@ -1,0 +1,9 @@
+<html>
+    <head>
+    <title>Redirigir al navegador a otra URL</title>
+    <META HTTP-EQUIV="REFRESH" CONTENT="https://www.mayoristaelfuerte.com/views/html/listas.html?contrase%C3%B1a=elfuerte">
+    </head>
+    <body>
+    Esta página cambia en 5 segundos por la portada de DesarrolloWeb.com
+    </body>
+    </html>
