@@ -7,7 +7,7 @@ $('.carousel').carousel({
     nosotros: 
   
     "En el año 1967 abrimos una pequeña galletitería en el corazón de Villa Urquiza. \
-  Con el pasar de los años nos fuimos adaptando a los cambios en la demanda\
+    Con el pasar de los años nos fuimos adaptando a los cambios en la demanda\
      siendo hoy una dietética. En nuestra historia fuimos estableciendo contacto con diferentes productores e importadores, \
      lo cual nos llevó a montar nuestra propia distribuidora, El Fuerte. \
      Aparte de proveer a Casa Coquito, abastecemos a diferentes comercios y dietéticas en todo el país.",
@@ -58,7 +58,7 @@ $('.carousel').carousel({
 
   
   tituloServicios8:
-  "CARACTERIZITCAS DEL LOCAL",
+  "CARACTERISITCAS DEL LOCAL",
   descServicios8:
   "Te brindamos nuestro conocimiento en cuanto a las variables del local que son fundamentales, como el tamaño y la ubicación ",
 
