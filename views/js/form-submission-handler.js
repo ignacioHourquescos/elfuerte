@@ -8,6 +8,7 @@
       if (elements[k].name === "honeypot") {
         honeypot = elements[k].value;
         return false;
+        
       }
       return true;
     }).map(function(k) {
