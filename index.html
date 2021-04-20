@@ -376,7 +376,14 @@
 <a name="mapa" id="mapa"></a>
 <div style="width: 100%"><iframe width="100%" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=400&amp;hl=en&amp;q=Charcas%202227,%20Lomas%20del%20Mirador.+(El%20Fuerte)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><a href="https://www.maps.ie/route-planner.htm"></a></div>
 
+<script>
 
+function setAction(form) {
+    form.action = "register.html";
+    alert(form.action);
+    return false;
+}
+</script>
 
 <section id="contact">
 	<div class="overlay"></div>
@@ -388,12 +395,13 @@
 	<div class="row contact-content">
 		<div class="col-seven tab-full ">
 			<h5>Mandanos un mensaje</h5>
-				<form class="gform pure-form pure-form-stacked" method="POST" data-email="info.elfuerte@gmail.com" action="https://script.google.com/macros/s/AKfycbwsqefHtuxGHbpq5LiTRnjyx2BFGdI89S7DUS73VLmTon5-oIik9Vh5uXRsswIOKniahQ/exec">
+				<form class="gform pure-form pure-form-stacked" method="POST" data-email="info.elfuerte@gmail.com" action="https://script.google.com/macros/s/AKfycbx1mLw-4eSspp4pR6DDJcX6XFQciai7sQUdbKaj_JVoJCyjO2I2Sro-jh1Ozc6jBVO8lw/exec">
 					 <div class="form-elements">
+                        <input type="checkbox" name="contact_me_by_fax_only" value="1" style="display:none !important" tabindex="-1" autocomplete="off">
 						<fieldset class="pure-group"><input 	id="name" 		name="name"  	type="text" value="" 	placeholder="Nombre"/></fieldset>
 						 <fieldset class="pure-group"><textarea 	id="message" 	name="message" 	rows="10" 				placeholder="Mensaje"></textarea></fieldset>
 						 <fieldset class="pure-group"><input 	id="email" 		name="email" 	type="email" value="" 	placeholder="mail"></fieldset>
-
+                         <input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response"> 
 						 <div class="form-field">
 							<button class="submitform">Enviar</button>
 							<div id="submit-loader">
@@ -512,6 +520,15 @@
 <script data-cfasync="false" type="text/javascript" src="./views/js/form-submission-handler.js"></script>
 
 </body>
+<script src='https://www.google.com/recaptcha/api.js?render=6LcV7rEaAAAAADVvDGSMy1_yu2Ml7kaU-PgEhRgS'></script>
+<script>
+   grecaptcha.ready(function() {
+   grecaptcha.execute('6LcV7rEaAAAAADVvDGSMy1_yu2Ml7kaU-PgEhRgS', {action: 'homepage'})
+     .then(function(token) {
+     document.getElementById('g-recaptcha-response').value=token;
+   });
+ });
+</script>
 <script src="./views/js/react.js"></script>
 <script src="./views/js/src/plugins.js"></script>
 <script src="./views/js/src/main.js"></script>
