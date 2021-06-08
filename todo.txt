@@ -83,6 +83,7 @@ A definir
 ⭕-Abrir una dietetica / Plantear combos iniciales
 ⭕-Poder recibir pedidos via Wpp / mail
 ⭕-Agregar detalle de producto (imagenes de Fotografa)
+⭕-Mejorar listas de precios +Filtros +Columnas (celiaco, vegano etc)
 
 
 

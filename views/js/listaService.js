@@ -25,7 +25,7 @@ function obtenerListaEspecifica() {
          }else if (window.matchMedia("(max-width: 600px)").matches) {
             array.push({
                "codi": data[i].gsx$codigo.$t,
-               "desc": data[i].gsx$descripcion.$t + "<span style='margin:1rem;color:red; border:1px solid red;background-color:#ec9c9cbf; border-radius:1000px; padding:0 0.5rem;'>modificado</span>",
+               "desc": data[i].gsx$descripcion.$t + "<span style='margin:1rem;color:red; border:1px solid red;background-color:#fdc3c3bf; border-radius:1000px; padding:0 0.5rem;'>modificado</span>",
                "pres": data[i].gsx$presentacion.$t,
                "cate": data[i].gsx$categoria.$t,
                "prec": '$' + parseInt(data[i].gsx$precio.$t),
@@ -36,7 +36,7 @@ function obtenerListaEspecifica() {
          }else{
             array.push({
                "codi": data[i].gsx$codigo.$t,
-               "desc": data[i].gsx$descripcion.$t + "&nbsp<span style='color:red; border:1px solid red;background-color:#ec9c9cbf; border-radius:100px; padding:0 0.5rem;'>Modificado esta semana</span>",
+               "desc": data[i].gsx$descripcion.$t + "&nbsp<span style='color:red; border:1px solid red;background-color:#fdc3c3bf; border-radius:100px; padding:0 0.5rem;'>Modificado esta semana</span>",
                "pres": data[i].gsx$presentacion.$t,
                "cate": data[i].gsx$categoria.$t,
                "prec": '$' + parseInt(data[i].gsx$precio.$t),
