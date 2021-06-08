@@ -430,7 +430,7 @@ th,
 td {
   padding: 1.5rem 3rem;
   text-align: left;
-  border-bottom: 1px solid #E8E8E8;
+  border-bottom: 1px solid #e8e8e8;
 }
 
 th {
@@ -441,6 +441,13 @@ th {
 td {
   line-height: 0.7;
 }
+
+@media only screen and (max-width: 600px) {
+   td {
+      line-height: 100%;
+    }
+ }
+
 
 th:first-child,
 td:first-child {

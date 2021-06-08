@@ -64,21 +64,26 @@ asesoramiento
 
 //////////////////////////////////////////////
 03/06
--Signo de admiracion
--Mayuscula
--formato de excel / a pdf
--Icono de infromacion 
--Listado de productos sin precio
--Productos para dieteticas 
--imagen semillas reales no legumbres 
--imagen legumbre real no una cualquiera
--Icono de Mayorista frutas secas
--Contacto en todas las pantallas
+Hecho
+✅-Corregir vista de celular (muy importante)
+✅-Cuadrado de busqueda que diga "buscar" (importante) 
+✅-Signos de admiración
+✅-Modificar icono de "+info" en listas 
+✅-agregar "Productos para dieteticas" 
+✅-Corregir imagenes semillas y legumrbres reales no legumbres 
+✅-Cambiar Icono de Mayorista de frutas secas
+✅-Acceso a "Contacto" en todas las pantallas
 
+Pendiente
+🟡- Mail problema de spam 
 
--Mail problema de spam (importante)
--Cuadrado de busqueda que diga buscar (importante) 
--Vista de celular (muy importante)
+A definir
+⭕-Nuevo formato lista. Formato "lindo" PDF. a definir
+⭕-Listado de productos sin precio tipo catalogo
+⭕-Abrir una dietetica / Plantear combos iniciales
+⭕-Poder recibir pedidos via Wpp / mail
+⭕-Agregar detalle de producto (imagenes de Fotografa)
+
 
 
 
