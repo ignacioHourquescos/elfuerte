@@ -80,10 +80,13 @@ Pendiente
 A definir
 ⭕-Nuevo formato lista. Formato "lindo" PDF. a definir
 ⭕-Listado de productos sin precio tipo catalogo
-⭕-Abrir una dietetica / Plantear combos iniciales
-⭕-Poder recibir pedidos via Wpp / mail
 ⭕-Agregar detalle de producto (imagenes de Fotografa)
+⭕-Poder recibir pedidos via Wpp / mail
 ⭕-Mejorar listas de precios +Filtros +Columnas (celiaco, vegano etc)
+⭕-Abrir una dietetica / Plantear combos iniciales
+⭕-armar estadisticas de ventas vs costos. analizar rentabilidad
+⭕-Emepezar a trabajar las redes sociales. IG ppalmente
+
 
 
 
