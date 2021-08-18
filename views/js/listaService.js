@@ -6,53 +6,60 @@ document.getElementById("select").addEventListener("click", function() {
 
 
 // 'https://spreadsheets.google.com/feeds/list/1JIm_6mWe8rJ3yTDX88LMUhKQkzGn9xvUpcMs15fJNSc/1/public/values?alt=json'
-// 'https://sheets.googleapis.com/v4/spreadsheets/1JIm_6mWe8rJ3yTDX88LMUhKQkzGn9xvUpcMs15fJNSc/values/1?alt=json&key='+key-value'
+// 'https://sheets.googleapis.com/v4/spreadsheets/1JIm_6mWe8rJ3yTDX88LMUhKQkzGn9xvUpcMs15fJNSc/values/1?alt=json&key=AIzaSyDmSmF2Y7xj_q1v3mON4kPhU0IDpgJNS4M'
 
 
 function obtenerListaEspecifica() {
-   $.getJSON('https://spreadsheets.google.com/feeds/list/1JIm_6mWe8rJ3yTDX88LMUhKQkzGn9xvUpcMs15fJNSc/1/public/values?alt=json', function (data) {
+   $.getJSON('https://sheets.googleapis.com/v4/spreadsheets/1JIm_6mWe8rJ3yTDX88LMUhKQkzGn9xvUpcMs15fJNSc/values/Lista?alt=json&key=AIzaSyDmSmF2Y7xj_q1v3mON4kPhU0IDpgJNS4M', function (data) {
       var categoria_filtrada = document.getElementById("select").value;
-      var data = data.feed.entry;
+      // var data = data.values;
+      console.log(data.values)
       var array = [];
 
-      for (var i = 0; i < data.length; i++) {
-         var lastUpdate = convertirFecha(data[i].gsx$fecha.$t);
+      for (var i = 1; i < data.values.length; i++) {
+       var lastUpdate = convertirFecha(data.values[i][5]);
 
-         if (lastUpdate ==false){
-         array.push({
-            "codi": data[i].gsx$codigo.$t,
-            "desc": data[i].gsx$descripcion.$t,
-            "pres": data[i].gsx$presentacion.$t,
-            "cate": data[i].gsx$categoria.$t,
-            "prec": '$' + parseInt(data[i].gsx$precio.$t),
-            "orig": data[i].gsx$origen.$t,
-            "desc2": data[i].gsx$desc2.$t,
-            "fecha": lastUpdate,
-         });
-         }else if (window.matchMedia("(max-width: 600px)").matches) {
-            array.push({
-               "codi": data[i].gsx$codigo.$t,
-               "desc": data[i].gsx$descripcion.$t + "<span style='margin:1rem;color:red; border:1px solid red;background-color:#fdc3c3bf; border-radius:1000px; padding:0 0.5rem;'>modificado</span>",
-               "pres": data[i].gsx$presentacion.$t,
-               "cate": data[i].gsx$categoria.$t,
-               "prec": '$' + parseInt(data[i].gsx$precio.$t),
-               "orig": data[i].gsx$origen.$t,
-               "desc2": data[i].gsx$desc2.$t,
-               "fecha": lastUpdate,
-            });
-         }else{
-            array.push({
-               "codi": data[i].gsx$codigo.$t,
-               "desc": data[i].gsx$descripcion.$t + "&nbsp<span style='color:red; border:1px solid red;background-color:#fdc3c3bf; border-radius:100px; padding:0 0.5rem;'>Modificado esta semana</span>",
-               "pres": data[i].gsx$presentacion.$t,
-               "cate": data[i].gsx$categoria.$t,
-               "prec": '$' + parseInt(data[i].gsx$precio.$t),
-               "orig": data[i].gsx$origen.$t,
-               "desc2": data[i].gsx$desc2.$t,
-               "fecha": lastUpdate,
-            });
+            if(data.values[i][0]!=null && data.values[i][0]!=0){
+            if (lastUpdate ==false){
+               array.push({
+                  "codi": data.values[i][0],
+                  "desc": data.values[i][1],
+                  "pres": data.values[i][9],
+                  "cate": data.values[i][6],
+                  "prec": '$' + parseInt(data.values[i][4]),
+                  "orig": data.values[i][8],
+                  "desc2": data.values[i][7],
+                  "fecha": lastUpdate,
+               });
+            }
+            else if (window.matchMedia("(max-width: 600px)").matches) {
+               array.push({
+                  "codi": data.values[i][0],
+                  "desc": data.values[i][1] + "<span style='margin:1rem;color:red; border:1px solid red;background-color:#fdc3c3bf; border-radius:1000px; padding:0 0.5rem;'>modificado</span>",
+                  "desc": data.values[i][1],
+                  "pres": data.values[i][9],
+                  "cate": data.values[i][6],
+                  "prec": '$' + parseInt(data.values[i][4]),
+                  "orig": data.values[i][8],
+                  "desc2": data.values[i][7],
+                  "fecha": lastUpdate,
+               });
+            }else{
+               array.push({
+                   "codi": data.values[i][0],
+                   "desc": data.values[i][1] + "&nbsp<span style='color:red; border:1px solid red;background-color:#fdc3c3bf; border-radius:100px; padding:0 0.5rem;'>Modificado esta semana</span>",
+                   "desc": data.values[i][1],
+                   "pres": data.values[i][9],
+                   "cate": data.values[i][6],
+                   "prec": '$' + parseInt(data.values[i][4]),
+                   "orig": data.values[i][8],
+                   "desc2": data.values[i][7],
+                   "fecha": lastUpdate
+               });
+            }
          }
       }
+      console.log(array)
 
       if (categoria_filtrada == "Todas las Categorias") {
          array = array;
@@ -72,22 +79,22 @@ function obtenerListaEspecifica() {
 
 
 
-function operateFormatter(value, row, index) {
-   if (row.desc2 == "") {
-      return [
-         '</a>  ',
-         '<p style="color:#e8e8e8;">Sin detalle</p>',
-         '</a>'
-      ].join('')
-   } else {
-      return [
-         '</a>  ',
-         '<a class="like" href="javascript:void(0)" title="Remove">',
-         `<p style="color:grey;">${row.desc2.substring(0,20)}...</p>`,
-         '</a>'
-      ].join('')
-   }
-}
+ function operateFormatter(value, row, index) {
+    if (row.desc2 == "" || row.desc2==null) {
+       return [
+          '</a>  ',
+          '<p style="color:#e8e8e8;">Sin detalle</p>',
+          '</a>'
+       ].join('')
+    } else {
+       return [
+          '</a>  ',
+          '<a class="like" href="javascript:void(0)" title="Remove">',
+          `<p style="color:grey;">${row.desc2.substring(0,20)}...</p>`,
+          '</a>'
+       ].join('')
+    }
+ }
 
   window.operateEvents = {
      'click .like': function (e, value, row, index) {
@@ -122,7 +129,6 @@ const convertirFecha = (fecha) => {
    var dateObject = new Date(+dateParts[2], dateParts[1] - 1, +dateParts[0]);
    const diffDays = Math.ceil(Math.abs(new Date() - dateObject) / (1000 * 60 * 60 * 24));
    if (diffDays < 7) {
-   
       return true
    } else
       return (false);

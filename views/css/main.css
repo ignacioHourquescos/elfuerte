@@ -1539,7 +1539,7 @@ header .header-logo a {
   width: 100%;
   height: 100%;
   background-color: #151515;
-  background-image: url(../images/fondoNaranja.png);
+  background-image: url(../images/fondoNaranja.webp);
   background-repeat: no-repeat;
   background-position: center 30%;
   -webkit-background-size: cover;
@@ -2588,7 +2588,7 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
  * ------------------------------------------------------------------- */
 #contact {
   background-color: #111111;
-  background-image: url(../images/contact-bg.jpg);
+  background-image: url(../images/contact-bg.webp);
   background-repeat: no-repeat;
   background-position: center;
   -webkit-background-size: cover;
