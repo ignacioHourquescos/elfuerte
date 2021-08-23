@@ -3,8 +3,6 @@ document.getElementById("select").addEventListener("click", function() {
 });
 // 'https://spreadsheets.google.com/feeds/list/'+worksheet_id+'/'+tab_id+'/public/values?alt=json'
 // 'https://sheets.googleapis.com/v4/spreadsheets/'+worksheet_id+'/values/'+tab_name+'?alt=json&key='+key-value'
-
-
 // 'https://spreadsheets.google.com/feeds/list/1JIm_6mWe8rJ3yTDX88LMUhKQkzGn9xvUpcMs15fJNSc/1/public/values?alt=json'
 // 'https://sheets.googleapis.com/v4/spreadsheets/1JIm_6mWe8rJ3yTDX88LMUhKQkzGn9xvUpcMs15fJNSc/values/1?alt=json&key=AIzaSyDmSmF2Y7xj_q1v3mON4kPhU0IDpgJNS4M'
 
@@ -13,17 +11,17 @@ function obtenerListaEspecifica() {
    $.getJSON('https://sheets.googleapis.com/v4/spreadsheets/1JIm_6mWe8rJ3yTDX88LMUhKQkzGn9xvUpcMs15fJNSc/values/Lista?alt=json&key=AIzaSyDmSmF2Y7xj_q1v3mON4kPhU0IDpgJNS4M', function (data) {
       var categoria_filtrada = document.getElementById("select").value;
       // var data = data.values;
-      console.log(data.values)
+
       var array = [];
 
       for (var i = 1; i < data.values.length; i++) {
        var lastUpdate = convertirFecha(data.values[i][5]);
-
+         console.log(lastUpdate);
             if(data.values[i][0]!=null && data.values[i][0]!=0){
             if (lastUpdate ==false){
                array.push({
                   "codi": data.values[i][0],
-                  "desc": data.values[i][1],
+                   "desc": data.values[i][1],
                   "pres": data.values[i][9],
                   "cate": data.values[i][6],
                   "prec": '$' + parseInt(data.values[i][4]),
@@ -36,7 +34,6 @@ function obtenerListaEspecifica() {
                array.push({
                   "codi": data.values[i][0],
                   "desc": data.values[i][1] + "<span style='margin:1rem;color:red; border:1px solid red;background-color:#fdc3c3bf; border-radius:1000px; padding:0 0.5rem;'>modificado</span>",
-                  "desc": data.values[i][1],
                   "pres": data.values[i][9],
                   "cate": data.values[i][6],
                   "prec": '$' + parseInt(data.values[i][4]),
@@ -47,8 +44,8 @@ function obtenerListaEspecifica() {
             }else{
                array.push({
                    "codi": data.values[i][0],
+                   "desc" : "modificadoooo",
                    "desc": data.values[i][1] + "&nbsp<span style='color:red; border:1px solid red;background-color:#fdc3c3bf; border-radius:100px; padding:0 0.5rem;'>Modificado esta semana</span>",
-                   "desc": data.values[i][1],
                    "pres": data.values[i][9],
                    "cate": data.values[i][6],
                    "prec": '$' + parseInt(data.values[i][4]),
