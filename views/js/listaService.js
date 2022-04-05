@@ -33,8 +33,7 @@ function obtenerListaEspecifica() {
             else if (window.matchMedia("(max-width: 600px)").matches) {
                array.push({
                   "codi": data.values[i][0],
-                  "desc": data.values[i][1] + "<span style='margin:1rem;color:red; border:1px solid red;background-color:#fdc3c3bf; border-radius:1000px; padding:0 0.5rem;'>modificado</span>",
-                  "pres": data.values[i][9],
+                  "desc": data.values[i][1] + displayTagHandler(data.values[i][10], "mobile"),
                   "cate": data.values[i][6],
                   "prec": '$' + parseInt(data.values[i][4]),
                   "orig": data.values[i][8],
@@ -45,13 +44,14 @@ function obtenerListaEspecifica() {
                array.push({
                    "codi": data.values[i][0],
                    "desc" : "modificadoooo",
-                   "desc": data.values[i][1] + "&nbsp<span style='color:red; border:1px solid red;background-color:#fdc3c3bf; border-radius:100px; padding:0 0.5rem;'>Modificado esta semana</span>",
+                   "desc": data.values[i][1] + displayTagHandler(data.values[i][10],"desktop"),
                    "pres": data.values[i][9],
                    "cate": data.values[i][6],
                    "prec": '$' + parseInt(data.values[i][4]),
                    "orig": data.values[i][8],
                    "desc2": data.values[i][7],
-                   "fecha": lastUpdate
+                   "fecha": lastUpdate,
+                   "baja": data.values[i][10]
                });
             }
          }
@@ -119,7 +119,6 @@ if (window.matchMedia("(max-width: 600px)").matches) {
 }
 
 
-
 //////////////// HANDLER DE FECHAS
 const convertirFecha = (fecha) => {
    var dateParts = fecha.split("/");
@@ -132,3 +131,25 @@ const convertirFecha = (fecha) => {
 }
 
 
+
+
+const displayTagHandler = (data, type) => {
+	if (!data) {
+    if(type=="mobile"){
+      return(
+        "<span style='margin:1rem;color:red; border:1px solid red;background-color:#fdc3c3bf; border-radius:1000px; padding:0 0.5rem;'>Aumentó</span>"
+      );
+    }
+		return(
+			"<span style='margin:1rem;color:red; border:1px solid red;background-color:#fdc3c3bf; border-radius:1000px; padding:0 0.5rem;'>Aumentó esta semana</span>"
+		);
+	} else {
+    if(type=="mobile"){
+      return "<span style='margin:1rem;color:green; border:1px solid green;background-color:#abe2128b; border-radius:1000px; padding:0 0.5rem;'>Bajó</span>";
+    }else{
+    return "<span style='margin:1rem;color:green; border:1px solid green;background-color:#abe2128b; border-radius:1000px; padding:0 0.5rem;'>Bajó esta semana</span>";
+    }
+  }
+
+
+};
