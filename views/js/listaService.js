@@ -143,11 +143,17 @@ const displayTagHandler = (data, type) => {
 		return(
 			"<span style='margin:1rem;color:red; border:1px solid red;background-color:#fdc3c3bf; border-radius:1000px; padding:0 0.5rem;'>Aumentó esta semana</span>"
 		);
-	} else {
+	} else if(data=="BAJA") {
     if(type=="mobile"){
       return "<span style='margin:1rem;color:green; border:1px solid green;background-color:#abe2128b; border-radius:1000px; padding:0 0.5rem;'>Bajó</span>";
     }else{
     return "<span style='margin:1rem;color:green; border:1px solid green;background-color:#abe2128b; border-radius:1000px; padding:0 0.5rem;'>Bajó esta semana</span>";
+    }
+  } else if(data=="NUEVO") {
+    if(type=="mobile"){
+      return "<span style='margin:1rem;color:blue; border:1px solid blue;background-color:#006fdd6e; border-radius:1000px; padding:0 0.5rem;'>Nuevo!</span>";
+    }else{
+    return "<span style='margin:1rem;color:blue; border:1px solid blue;background-color:#006fdd6e; border-radius:1000px; padding:0 0.5rem;'>Nuevo Producto!</span>";
     }
   }
 
