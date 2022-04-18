@@ -15,7 +15,7 @@ function obtenerListaEspecifica() {
       var array = [];
 
       for (var i = 1; i < data.values.length; i++) {
-       var lastUpdate = convertirFecha(data.values[i][5]);
+       var lastUpdate = convertirFecha(data.values[i][5], data.values[i][10]);
          console.log(lastUpdate);
             if(data.values[i][0]!=null && data.values[i][0]!=0){
             if (lastUpdate ==false){
@@ -120,12 +120,14 @@ if (window.matchMedia("(max-width: 600px)").matches) {
 
 
 //////////////// HANDLER DE FECHAS
-const convertirFecha = (fecha) => {
+const convertirFecha = (fecha, type) => {
    var dateParts = fecha.split("/");
    var dateObject = new Date(+dateParts[2], dateParts[1] - 1, +dateParts[0]);
    const diffDays = Math.ceil(Math.abs(new Date() - dateObject) / (1000 * 60 * 60 * 24));
    if (diffDays < 7) {
       return true
+   } else if (type =="NUEVO"){
+    return true
    } else
       return (false);
 }

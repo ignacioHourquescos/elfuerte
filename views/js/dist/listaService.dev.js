@@ -1,53 +1,58 @@
 "use strict";
 
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 document.getElementById("select").addEventListener("click", function () {
   obtenerListaEspecifica();
-});
+}); // 'https://spreadsheets.google.com/feeds/list/'+worksheet_id+'/'+tab_id+'/public/values?alt=json'
+// 'https://sheets.googleapis.com/v4/spreadsheets/'+worksheet_id+'/values/'+tab_name+'?alt=json&key='+key-value'
+// 'https://spreadsheets.google.com/feeds/list/1JIm_6mWe8rJ3yTDX88LMUhKQkzGn9xvUpcMs15fJNSc/1/public/values?alt=json'
+// 'https://sheets.googleapis.com/v4/spreadsheets/1JIm_6mWe8rJ3yTDX88LMUhKQkzGn9xvUpcMs15fJNSc/values/1?alt=json&key=AIzaSyDmSmF2Y7xj_q1v3mON4kPhU0IDpgJNS4M'
 
 function obtenerListaEspecifica() {
-  $.getJSON('https://spreadsheets.google.com/feeds/list/1JIm_6mWe8rJ3yTDX88LMUhKQkzGn9xvUpcMs15fJNSc/1/public/values?alt=json', function (data) {
-    var categoria_filtrada = document.getElementById("select").value;
-    var data = data.feed.entry;
+  $.getJSON('https://sheets.googleapis.com/v4/spreadsheets/1JIm_6mWe8rJ3yTDX88LMUhKQkzGn9xvUpcMs15fJNSc/values/Lista?alt=json&key=AIzaSyDmSmF2Y7xj_q1v3mON4kPhU0IDpgJNS4M', function (data) {
+    var categoria_filtrada = document.getElementById("select").value; // var data = data.values;
+
     var array = [];
 
-    for (var i = 0; i < data.length; i++) {
-      var lastUpdate = convertirFecha(data[i].gsx$fecha.$t);
+    for (var i = 1; i < data.values.length; i++) {
+      var lastUpdate = convertirFecha(data.values[i][5], data.values[i][10]);
+      console.log(lastUpdate);
 
-      if (lastUpdate == false) {
-        array.push({
-          "codi": data[i].gsx$codigo.$t,
-          "desc": data[i].gsx$descripcion.$t,
-          "pres": data[i].gsx$presentacion.$t,
-          "cate": data[i].gsx$categoria.$t,
-          "prec": '$' + parseInt(data[i].gsx$precio.$t),
-          "orig": data[i].gsx$origen.$t,
-          "desc2": data[i].gsx$desc2.$t,
-          "fecha": lastUpdate
-        });
-      } else if (window.matchMedia("(max-width: 600px)").matches) {
-        array.push({
-          "codi": data[i].gsx$codigo.$t,
-          "desc": data[i].gsx$descripcion.$t + false ? "<span style='margin:1rem;color:green; border:1px solid red;background-color:#fdc3c3bf; border-radius:1000px; padding:0 0.5rem;'>modificado</span>" : "<span style='margin:1rem;color:green; border:1px solid red;background-color:#00FFFF; border-radius:1000px; padding:0 0.5rem;'>modificado</span>",
-          "pres": data[i].gsx$presentacion.$t,
-          "cate": data[i].gsx$categoria.$t,
-          "prec": '$' + parseInt(data[i].gsx$precio.$t),
-          "orig": data[i].gsx$origen.$t,
-          "desc2": data[i].gsx$desc2.$t,
-          "fecha": lastUpdate
-        });
-      } else {
-        array.push({
-          "codi": data[i].gsx$codigo.$t,
-          "desc": data[i].gsx$descripcion.$t + "&nbsp<span style='color:red; border:1px solid red;background-color:#fdc3c3bf; border-radius:100px; padding:0 0.5rem;'>Modificado esta semana</span>",
-          "pres": data[i].gsx$presentacion.$t,
-          "cate": data[i].gsx$categoria.$t,
-          "prec": '$' + parseInt(data[i].gsx$precio.$t),
-          "orig": data[i].gsx$origen.$t,
-          "desc2": data[i].gsx$desc2.$t,
-          "fecha": lastUpdate
-        });
+      if (data.values[i][0] != null && data.values[i][0] != 0) {
+        if (lastUpdate == false) {
+          array.push({
+            "codi": data.values[i][0],
+            "desc": data.values[i][1],
+            "pres": data.values[i][9],
+            "cate": data.values[i][6],
+            "prec": '$' + parseInt(data.values[i][4]),
+            "orig": data.values[i][8],
+            "desc2": data.values[i][7],
+            "fecha": lastUpdate
+          });
+        } else if (window.matchMedia("(max-width: 600px)").matches) {
+          array.push({
+            "codi": data.values[i][0],
+            "desc": data.values[i][1] + displayTagHandler(data.values[i][10], "mobile"),
+            "cate": data.values[i][6],
+            "prec": '$' + parseInt(data.values[i][4]),
+            "orig": data.values[i][8],
+            "desc2": data.values[i][7],
+            "fecha": lastUpdate
+          });
+        } else {
+          var _array$push;
+
+          array.push((_array$push = {
+            "codi": data.values[i][0],
+            "desc": "modificadoooo"
+          }, _defineProperty(_array$push, "desc", data.values[i][1] + displayTagHandler(data.values[i][10], "desktop")), _defineProperty(_array$push, "pres", data.values[i][9]), _defineProperty(_array$push, "cate", data.values[i][6]), _defineProperty(_array$push, "prec", '$' + parseInt(data.values[i][4])), _defineProperty(_array$push, "orig", data.values[i][8]), _defineProperty(_array$push, "desc2", data.values[i][7]), _defineProperty(_array$push, "fecha", lastUpdate), _defineProperty(_array$push, "baja", data.values[i][10]), _array$push));
+        }
       }
     }
+
+    console.log(array);
 
     if (categoria_filtrada == "Todas las Categorias") {
       array = array;
@@ -65,7 +70,7 @@ function obtenerListaEspecifica() {
 }
 
 function operateFormatter(value, row, index) {
-  if (row.desc2 == "") {
+  if (row.desc2 == "" || row.desc2 == null) {
     return ['</a>  ', '<p style="color:#e8e8e8;">Sin detalle</p>', '</a>'].join('');
   } else {
     return ['</a>  ', '<a class="like" href="javascript:void(0)" title="Remove">', "<p style=\"color:grey;\">".concat(row.desc2.substring(0, 20), "...</p>"), '</a>'].join('');
@@ -96,12 +101,36 @@ if (window.matchMedia("(max-width: 600px)").matches) {
 } //////////////// HANDLER DE FECHAS
 
 
-var convertirFecha = function convertirFecha(fecha) {
+var convertirFecha = function convertirFecha(fecha, type) {
   var dateParts = fecha.split("/");
   var dateObject = new Date(+dateParts[2], dateParts[1] - 1, +dateParts[0]);
   var diffDays = Math.ceil(Math.abs(new Date() - dateObject) / (1000 * 60 * 60 * 24));
 
   if (diffDays < 7) {
     return true;
+  } else if (type == "NUEVO") {
+    return true;
   } else return false;
+};
+
+var displayTagHandler = function displayTagHandler(data, type) {
+  if (!data) {
+    if (type == "mobile") {
+      return "<span style='margin:1rem;color:red; border:1px solid red;background-color:#fdc3c3bf; border-radius:1000px; padding:0 0.5rem;'>Aumentó</span>";
+    }
+
+    return "<span style='margin:1rem;color:red; border:1px solid red;background-color:#fdc3c3bf; border-radius:1000px; padding:0 0.5rem;'>Aumentó esta semana</span>";
+  } else if (data == "BAJA") {
+    if (type == "mobile") {
+      return "<span style='margin:1rem;color:green; border:1px solid green;background-color:#abe2128b; border-radius:1000px; padding:0 0.5rem;'>Bajó</span>";
+    } else {
+      return "<span style='margin:1rem;color:green; border:1px solid green;background-color:#abe2128b; border-radius:1000px; padding:0 0.5rem;'>Bajó esta semana</span>";
+    }
+  } else if (data == "NUEVO") {
+    if (type == "mobile") {
+      return "<span style='margin:1rem;color:blue; border:1px solid blue;background-color:#006fdd6e; border-radius:1000px; padding:0 0.5rem;'>Nuevo!</span>";
+    } else {
+      return "<span style='margin:1rem;color:blue; border:1px solid blue;background-color:#006fdd6e; border-radius:1000px; padding:0 0.5rem;'>Nuevo Producto!</span>";
+    }
+  }
 };
